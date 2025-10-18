@@ -157,6 +157,54 @@ export function JobsIcon() {
   );
 }
 
+export function SettingsIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      fill="none"
+      style={{
+        WebkitPrintColorAdjust: ":exact",
+      }}
+      viewBox="357 2334 24 24"
+    >
+      <g
+        style={{
+          fill: "#000",
+        }}
+      >
+        <path
+          fill="none"
+          d="M363 2347.5v-9.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75v-3.75m12-3v-9.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75v-3.75m-6-9v-3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75v-9.75"
+          className="fills"
+          style={{
+            fill: "none",
+          }}
+        />
+        <g
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="strokes"
+        >
+          <path
+            d="M363 2347.5v-9.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75v-3.75m12-3v-9.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75v-3.75m-6-9v-3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75v-9.75"
+            className="stroke-shape"
+            style={{
+              fill: "none",
+              fillOpacity: "none",
+              strokeWidth: 1.5,
+              stroke: "#fff",
+              strokeOpacity: 1,
+            }}
+          />
+        </g>
+      </g>
+    </svg>
+  );
+}
+
 export function PlusIcon() {
   return (
     <svg
