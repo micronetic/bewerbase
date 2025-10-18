@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #14b8a6;
+  --color-dark-primary: #1a1a1a;
+  --color-dark-secondary: #2b2b2b;
+  --color-amber: #d97706;
+  --color-green: #16a34a;
+  --color-red: #dc2626;
+  --color-light-grey: #6f6f6f;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../src/assets/fonts/Manrope/static/Manrope-Regular.ttf")
+    format("truetype");
+}
+
+body {
+  background: var(--color-dark-primary);
+  font-family: Manrope, sans-serif;
+  color: #fff;
+}
