@@ -37,7 +37,7 @@ export default function Sidebar({ hideMobile }) {
 
   return (
     <aside
-      className={`${collapsed ? "w-[60px] px-2" : "w-[350px] px-7"} ${hideMobile ? "hidden md:flex flex-col gap-y-12 py-12 transition-all duration-200 ease-out border-r border-r-light-grey/50" : ""}`}
+      className={`${collapsed ? "w-[60px] px-2" : "w-[350px] px-7"} ${hideMobile ? "hidden md:flex flex-col gap-y-12 py-6 transition-all duration-200 ease-out border-r border-r-light-grey/20" : ""}`}
     >
       <div className="flex justify-between items-center p-2.5">
         {!collapsed && <Logo />}

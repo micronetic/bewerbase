@@ -16,6 +16,10 @@
     format("truetype");
 }
 
+html {
+  overscroll-behavior: none;
+}
+
 body {
   background: var(--color-dark-primary);
   font-family: Manrope, sans-serif;
