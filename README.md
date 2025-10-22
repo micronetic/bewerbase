@@ -1,4 +1,4 @@
 <div style="text-align:center;">
-# ApplicationMate
+<h1>ApplicationMate</h1>
 <img width="100" height="100" alt="Application Mate Logo" src="app-icon.png" />
 </div>
