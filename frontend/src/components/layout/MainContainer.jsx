@@ -1,8 +1,9 @@
+import { Outlet } from "react-router";
 import Button from "../ui/Button";
 import { DownloadIcon, PlusIcon } from "../ui/Icons";
 import MobileHeader from "./MobileHeader";
 
-export default function Main() {
+export default function MainContainer() {
   return (
     <div className="flex flex-col w-full">
       <header className="w-full">
@@ -15,8 +16,8 @@ export default function Main() {
           </div>
         </div>
       </header>
-      <main className="h-dvh flex flex-col justify-center items-center overscroll-contain">
-        <h2 className="text-3xl">bewerbungen sind hier</h2>
+      <main className="h-dvh flex flex-col p-6 items-center overscroll-contain">
+        <Outlet />
       </main>
     </div>
   );

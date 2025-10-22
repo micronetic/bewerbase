@@ -1,14 +1,9 @@
 import { useState } from "react";
-import {
-  HomeIcon,
-  JobsIcon,
-  Logo,
-  SettingsIcon,
-  SidebarIcon,
-} from "../ui/Icons";
+import { Link } from "react-router";
+import { HomeIcon, JobsIcon, Logo, SidebarIcon } from "../ui/Icons";
 
 const linkClasses =
-  "flex items-center gap-x-2.5 p-2.5 rounded-lg hover:bg-dark-secondary transition duration-300 ease-out focus:bg-dark-secondary";
+  "flex items-center gap-x-2.5 p-2.5 rounded-lg hover:bg-dark-secondary transition duration-300 ease-out focus:bg-dark-secondary active:bg-dark-secondary";
 
 export default function Sidebar({ hideMobile }) {
   const [collapsed, setCollapsed] = useState(false);
@@ -28,11 +23,11 @@ export default function Sidebar({ hideMobile }) {
       slug: "/jobs",
       icon: <JobsIcon />,
     },
-    {
-      title: "Settings",
-      slug: "/settings",
-      icon: <SettingsIcon />,
-    },
+    // {
+    //   title: "Settings",
+    //   slug: "/settings",
+    //   icon: <SettingsIcon />,
+    // },
   ];
 
   return (
@@ -49,10 +44,10 @@ export default function Sidebar({ hideMobile }) {
         <ul className="flex flex-col gap-y-2.5">
           {sideLinks.map((link) => (
             <li key={link.slug}>
-              <a href={link.slug} className={linkClasses}>
+              <Link to={link.slug} className={linkClasses}>
                 {link.icon}
                 {!collapsed && link.title}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
