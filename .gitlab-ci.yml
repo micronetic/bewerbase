@@ -1,16 +1,18 @@
 image: node:22.21.0
 
 pages:
+  cache:
+    paths:
+      - appmate-app/frontend/.yarn/cache
   before_script:
     - corepack enable
     - corepack prepare yarn@4.10.3 --activate
   script:
-    - cd frontend
+    - cd appmate-app/frontend
     - yarn install
     - yarn build
     - cp dist/index.html dist/404.html
-    - cp -r dist ../public
-
+    - cp -r dist ../../public
   artifacts:
     paths:
       - public
