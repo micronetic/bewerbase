@@ -1,4 +1,4 @@
-image: node:22.21.0
+image: node:22.21.0-bullseye
 
 pages:
   before_script:
@@ -6,11 +6,13 @@ pages:
     - corepack prepare yarn@4.10.3 --activate
   script:
     - cd appmate-app/frontend
-    - yarn install
-    - yarn build
+    - node --version
+    - yarn --version
+    - ls -la
+    - yarn install --immutable --verbose
+    - yarn build --verbose
     - cp dist/index.html dist/404.html
     - cp -r dist ../../public
-
   artifacts:
     paths:
       - public
