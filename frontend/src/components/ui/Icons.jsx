@@ -15,7 +15,7 @@ export function Logo({ className }) {
         d="m1086 2044.956 10.713-24.956h4.916l8.89 15.966 10.46-15.861H1126V2045h-5.026v-16.386l-4.487 6.895-6.177 9.491-11.192-18.698-3.765 8.719h5.97l2.606 4.727h-10.461l-2.194 5.252-5.274-.044"
         className="fills"
         style={{
-          fill: "#fff",
+          fill: "currentcolor",
           fillOpacity: 1,
         }}
       />
@@ -372,6 +372,194 @@ export function Hamburger() {
               </g>
             </g>
           </g>
+        </g>
+      </g>
+    </svg>
+  );
+}
+
+export function TrashIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      fill="none"
+      style={{
+        WebkitPrintColorAdjust: ":exact",
+      }}
+      viewBox="2288.5 130 24 24"
+    >
+      <g
+        style={{
+          fill: "#000",
+        }}
+      >
+        <path
+          fill="none"
+          d="m2303.24 139-.346 9m-4.788 0-.346-9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165-1.068 13.882a2.25 2.25 0 0 1-2.243 2.077h-7.834a2.25 2.25 0 0 1-2.243-2.077l-1.068-13.882m14.456 0a48.164 48.164 0 0 0-3.478-.397m-12 .562a48.7 48.7 0 0 1 1.022-.165m0 0a48.155 48.155 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.202a52.111 52.111 0 0 0-3.32 0c-1.18.038-2.09 1.023-2.09 2.202v.916m7.5 0a48.747 48.747 0 0 0-7.5 0"
+          className="fills"
+          style={{
+            fill: "none",
+          }}
+        />
+        <g
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="strokes"
+        >
+          <path
+            d="m2303.24 139-.346 9m-4.788 0-.346-9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165-1.068 13.882a2.25 2.25 0 0 1-2.243 2.077h-7.834a2.25 2.25 0 0 1-2.243-2.077l-1.068-13.882m14.456 0a48.164 48.164 0 0 0-3.478-.397m-12 .562a48.7 48.7 0 0 1 1.022-.165m0 0a48.155 48.155 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.202a52.111 52.111 0 0 0-3.32 0c-1.18.038-2.09 1.023-2.09 2.202v.916m7.5 0a48.747 48.747 0 0 0-7.5 0"
+            className="stroke-shape"
+            style={{
+              fill: "none",
+              fillOpacity: "none",
+              strokeWidth: 1.5,
+              stroke: "#6f6f6f",
+              strokeOpacity: 1,
+            }}
+          />
+        </g>
+      </g>
+    </svg>
+  );
+}
+
+export function PinIcon({ className }) {
+  return (
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      width={12}
+      height={12}
+      fill="none"
+      style={{
+        WebkitPrintColorAdjust: ":exact",
+      }}
+      viewBox="1734 -202 12 12"
+    >
+      <g
+        style={{
+          fill: "#000",
+        }}
+      >
+        <path
+          fill="none"
+          d="M1741.5-196.75a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"
+          className="fills"
+          style={{
+            fill: "none",
+          }}
+        />
+        <g
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="strokes"
+        >
+          <g className="inner-stroke-shape">
+            <defs>
+              <clipPath id="b">
+                <use href="#a" />
+              </clipPath>
+              <path
+                id="a"
+                d="M1741.5-196.75a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"
+                style={{
+                  fill: "none",
+                  fillOpacity: "none",
+                  strokeWidth: 1.546875,
+                  stroke: "#6f6f6f",
+                  strokeOpacity: 1,
+                }}
+              />
+            </defs>
+            <use clipPath="url('#b')" href="#a" />
+          </g>
+        </g>
+        <path
+          fill="none"
+          d="M1743.75-196.75c0 3.571-3.75 5.625-3.75 5.625s-3.75-2.054-3.75-5.625a3.75 3.75 0 0 1 7.5 0Z"
+          className="fills"
+          style={{
+            fill: "none",
+          }}
+        />
+        <g
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="strokes"
+        >
+          <g className="inner-stroke-shape">
+            <defs>
+              <clipPath id="d">
+                <use href="#c" />
+              </clipPath>
+              <path
+                id="c"
+                d="M1743.75-196.75c0 3.571-3.75 5.625-3.75 5.625s-3.75-2.054-3.75-5.625a3.75 3.75 0 0 1 7.5 0Z"
+                style={{
+                  fill: "none",
+                  fillOpacity: "none",
+                  strokeWidth: 1.546875,
+                  stroke: "#6f6f6f",
+                  strokeOpacity: 1,
+                }}
+              />
+            </defs>
+            <use clipPath="url('#d')" href="#c" />
+          </g>
+        </g>
+      </g>
+    </svg>
+  );
+}
+
+export function CalendarIcon({ className }) {
+  return (
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      width={12}
+      height={12}
+      fill="none"
+      style={{
+        WebkitPrintColorAdjust: ":exact",
+      }}
+      viewBox="1707 -202 12 12"
+    >
+      <g
+        style={{
+          fill: "#000",
+        }}
+      >
+        <path
+          fill="none"
+          d="M1710.375-200.5v1.125m5.25-1.125v1.125m-7.125 6.75v-5.625c0-.621.504-1.125 1.125-1.125h6.75c.621 0 1.125.504 1.125 1.125v5.625m-9 0c0 .621.504 1.125 1.125 1.125h6.75c.621 0 1.125-.504 1.125-1.125m-9 0v-3.75c0-.621.504-1.125 1.125-1.125h6.75c.621 0 1.125.504 1.125 1.125v3.75"
+          className="fills"
+          style={{
+            fill: "none",
+          }}
+        />
+        <g
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="strokes"
+        >
+          <path
+            d="M1710.375-200.5v1.125m5.25-1.125v1.125m-7.125 6.75v-5.625c0-.621.504-1.125 1.125-1.125h6.75c.621 0 1.125.504 1.125 1.125v5.625m-9 0c0 .621.504 1.125 1.125 1.125h6.75c.621 0 1.125-.504 1.125-1.125m-9 0v-3.75c0-.621.504-1.125 1.125-1.125h6.75c.621 0 1.125.504 1.125 1.125v3.75"
+            className="stroke-shape"
+            style={{
+              fill: "none",
+              fillOpacity: "none",
+              strokeWidth: 0.75,
+              stroke: "#6f6f6f",
+              strokeOpacity: 1,
+            }}
+          />
         </g>
       </g>
     </svg>
