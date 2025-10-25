@@ -8,7 +8,9 @@ pages:
     - cd frontend
     - yarn install
     - yarn build
+    - cp dist/index.html dist/404.html
     - cp -r dist ../public
+
   artifacts:
     paths:
       - public
