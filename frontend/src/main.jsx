@@ -6,7 +6,7 @@ import Home from "./pages/Home.jsx";
 import Jobs from "./pages/Jobs.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename="/appmate-app/">
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
