@@ -5,11 +5,12 @@ pages:
     - corepack enable
     - corepack prepare yarn@4.10.3 --activate
   script:
-    - cd appmate-app/frontend
+    - cd frontend
     - yarn install
     - yarn build
     - cp dist/index.html dist/404.html
-    - cp -r dist ../../public
+    - cp -r dist ../public
+
   artifacts:
     paths:
       - public
