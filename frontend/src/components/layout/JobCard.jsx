@@ -16,18 +16,18 @@ export default function JobCard() {
             </div>
           </div>
           <div className="flex gap-x-5">
-            <span className="flex items-center gap-x-1.5">
+            <div className="flex items-center gap-x-1.5">
               <PinIcon className="w-5 h-auto" />
               <p className="text-light-grey text-sm">Los Angeles</p>
-            </span>
-            <span className="flex items-center gap-x-1.5">
+            </div>
+            <div className="flex items-center gap-x-1.5">
               <CalendarIcon className="w-5 h-auto" />
               <p className="text-light-grey text-sm">13.11.2025</p>
-            </span>
+            </div>
           </div>
         </div>
       </div>
-      <button className="cursor-pointer">
+      <button className="cursor-pointer p-1.5 rounded-sm text-light-grey hover:bg-dark-primary hover:text-red transition duration-200">
         <TrashIcon />
       </button>
     </div>

@@ -416,7 +416,7 @@ export function TrashIcon() {
               fill: "none",
               fillOpacity: "none",
               strokeWidth: 1.5,
-              stroke: "#6f6f6f",
+              stroke: "currentcolor",
               strokeOpacity: 1,
             }}
           />
