@@ -565,3 +565,41 @@ export function CalendarIcon({ className }) {
     </svg>
   );
 }
+
+export function CloseIcon({ className, onClick }) {
+  return (
+    <svg
+      className={className}
+      onClick={onClick}
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      fill="none"
+      style={{
+        WebkitPrintColorAdjust: ":exact",
+      }}
+      viewBox="4691 -80 20 20"
+    >
+      <path
+        d="m4695-64 12-12m-12 0 12 12"
+        className="fills"
+        style={{
+          fill: "none",
+        }}
+      />
+      <g strokeLinecap="round" strokeLinejoin="round" className="strokes">
+        <path
+          d="m4695-64 12-12m-12 0 12 12"
+          className="stroke-shape"
+          style={{
+            fill: "none",
+            fillOpacity: "none",
+            strokeWidth: 1.5,
+            stroke: "#6f6f6f",
+            strokeOpacity: 1,
+          }}
+        />
+      </g>
+    </svg>
+  );
+}
