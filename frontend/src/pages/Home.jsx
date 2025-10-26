@@ -1,5 +1,5 @@
-import JobCard from "../components/layout/JobCard";
-import SortBar from "../components/layout/SortBar";
+import JobCard from "../components/ui/JobCard";
+import SortBar from "../components/ui/SortBar";
 
 export default function Home() {
   return (

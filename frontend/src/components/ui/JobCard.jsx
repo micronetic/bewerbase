@@ -1,4 +1,4 @@
-import { CalendarIcon, PinIcon, TrashIcon } from "../ui/Icons";
+import { CalendarIcon, PinIcon, TrashIcon } from "./Icons";
 
 export default function JobCard() {
   return (
