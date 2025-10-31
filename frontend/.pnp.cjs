@@ -40,7 +40,7 @@ const RAW_RUNTIME_STATE =
           ["globals", "npm:16.4.0"],\
           ["react", "npm:19.2.0"],\
           ["react-dom", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:19.2.0"],\
-          ["react-router", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:7.9.4"],\
+          ["react-router", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:7.9.5"],\
           ["tailwindcss", "npm:4.1.16"],\
           ["vite", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:7.1.12"]\
         ],\
@@ -2121,7 +2121,7 @@ const RAW_RUNTIME_STATE =
           ["globals", "npm:16.4.0"],\
           ["react", "npm:19.2.0"],\
           ["react-dom", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:19.2.0"],\
-          ["react-router", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:7.9.4"],\
+          ["react-router", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:7.9.5"],\
           ["tailwindcss", "npm:4.1.16"],\
           ["vite", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:7.1.12"]\
         ],\
@@ -3023,22 +3023,22 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["react-router", [\
-      ["npm:7.9.4", {\
-        "packageLocation": "../../../../../.yarn/berry/cache/react-router-npm-7.9.4-5f2536f541-10c0.zip/node_modules/react-router/",\
+      ["npm:7.9.5", {\
+        "packageLocation": "../../../../../.yarn/berry/cache/react-router-npm-7.9.5-b6ac20ba65-10c0.zip/node_modules/react-router/",\
         "packageDependencies": [\
-          ["react-router", "npm:7.9.4"]\
+          ["react-router", "npm:7.9.5"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:7.9.4", {\
-        "packageLocation": "./.yarn/__virtual__/react-router-virtual-b5e3f8e004/6/.yarn/berry/cache/react-router-npm-7.9.4-5f2536f541-10c0.zip/node_modules/react-router/",\
+      ["virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:7.9.5", {\
+        "packageLocation": "./.yarn/__virtual__/react-router-virtual-26250a856c/6/.yarn/berry/cache/react-router-npm-7.9.5-b6ac20ba65-10c0.zip/node_modules/react-router/",\
         "packageDependencies": [\
           ["@types/react", "npm:19.2.2"],\
           ["@types/react-dom", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:19.2.2"],\
           ["cookie", "npm:1.0.2"],\
           ["react", "npm:19.2.0"],\
           ["react-dom", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:19.2.0"],\
-          ["react-router", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:7.9.4"],\
+          ["react-router", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:7.9.5"],\
           ["set-cookie-parser", "npm:2.7.1"]\
         ],\
         "packagePeers": [\
