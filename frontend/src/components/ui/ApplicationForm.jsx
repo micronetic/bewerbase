@@ -1,15 +1,22 @@
 import { CloseIcon } from "./Icons";
 
-export default function ApplicationForm({ onClose }) {
+export default function ApplicationForm({ onClose, onSubmit }) {
   const inputStyles = `border border-dark-secondary rounded-lg px-3 py-2 resize-none`;
   const labelStyles = `flex flex-col gap-y-2 text-light-grey`;
+  // https://react.dev/reference/react-dom/components/input
+  function handleSubmit(e) {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    onSubmit(data);
+  }
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
       <div className="bg-dark-primary rounded-xl border border-dark-secondary p-6 w-[393px]">
         <div className="w-full flex justify-end items-center mb-2">
           <CloseIcon onClick={onClose} className="cursor-pointer" />
         </div>
-        <form className="flex flex-col gap-y-5">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-y-5">
           <label className={labelStyles}>
             Company
             <input

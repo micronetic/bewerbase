@@ -5,7 +5,7 @@ import Button from "../ui/Button";
 import { DownloadIcon, PlusIcon } from "../ui/Icons";
 import MobileHeader from "./MobileHeader";
 
-export default function Header() {
+export default function Header({ onAddApp }) {
   const [showModal, setShowModal] = useState(false);
   return (
     <header className="w-full">
@@ -23,7 +23,13 @@ export default function Header() {
       </div>
       {showModal &&
         createPortal(
-          <ApplicationForm onClose={() => setShowModal(false)} />,
+          <ApplicationForm
+            onClose={() => setShowModal(false)}
+            onSubmit={(data) => {
+              onAddApp(data);
+              setShowModal(false);
+            }}
+          />,
           document.body,
         )}
     </header>
