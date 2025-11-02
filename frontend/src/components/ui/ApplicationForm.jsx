@@ -3,12 +3,13 @@ import { CloseIcon } from "./Icons";
 export default function ApplicationForm({ onClose, onSubmit }) {
   const inputStyles = `border border-dark-secondary rounded-lg px-3 py-2 resize-none`;
   const labelStyles = `flex flex-col gap-y-2 text-light-grey`;
-  const handleSubmit = (e) => {
+  // https://react.dev/reference/react-dom/components/input
+  function handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
     onSubmit(data);
-  };
+  }
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
       <div className="bg-dark-primary rounded-xl border border-dark-secondary p-6 w-[393px]">
