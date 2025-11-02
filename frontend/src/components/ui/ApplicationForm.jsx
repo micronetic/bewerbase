@@ -1,10 +1,6 @@
 import { CloseIcon } from "./Icons";
 
-function saveAction() {
-  console.log(form);
-}
-
-export default function JobForm({ onClose }) {
+export default function ApplicationForm({ onClose }) {
   const inputStyles = `border border-dark-secondary rounded-lg px-3 py-2 resize-none`;
   const labelStyles = `flex flex-col gap-y-2 text-light-grey`;
   return (
@@ -13,7 +9,7 @@ export default function JobForm({ onClose }) {
         <div className="w-full flex justify-end items-center mb-2">
           <CloseIcon onClick={onClose} className="cursor-pointer" />
         </div>
-        <form action={saveAction} className="flex flex-col gap-y-5">
+        <form className="flex flex-col gap-y-5">
           <label className={labelStyles}>
             Company
             <input

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
+import ApplicationForm from "../ui/ApplicationForm";
 import Button from "../ui/Button";
 import { DownloadIcon, PlusIcon } from "../ui/Icons";
-import JobForm from "../ui/JobForm";
 import MobileHeader from "./MobileHeader";
 
 export default function Header() {
@@ -23,7 +23,7 @@ export default function Header() {
       </div>
       {showModal &&
         createPortal(
-          <JobForm onClose={() => setShowModal(false)} />,
+          <ApplicationForm onClose={() => setShowModal(false)} />,
           document.body,
         )}
     </header>
