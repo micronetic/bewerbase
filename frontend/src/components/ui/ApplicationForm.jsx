@@ -4,7 +4,7 @@ function saveAction() {
   console.log(form);
 }
 
-export default function JobForm(props) {
+export default function ApplicationForm(props) {
   const inputStyles = `border border-dark-secondary rounded-lg px-3 py-2 resize-none`;
   const labelStyles = `flex flex-col gap-y-2 text-light-grey`;
   return (

@@ -1,6 +1,6 @@
 import { CalendarIcon, PinIcon, TrashIcon } from "./Icons";
 
-export default function JobCard() {
+export default function ApplicationCard() {
   return (
     <div className="w-full flex justify-between items-center bg-dark-secondary rounded-lg p-2.5">
       <div className="flex items-center gap-x-5">
