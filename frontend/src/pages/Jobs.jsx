@@ -27,7 +27,7 @@ export default function Jobs() {
         }
 
         const result = await response.json();
-        console.log(result.stellenangebote);
+        // console.log(result.stellenangebote);
         setStellen(result.stellenangebote || []);
       } catch (error) {
         console.log(error.message);
@@ -41,7 +41,7 @@ export default function Jobs() {
       <h2 className="text-3xl capitalize mb-3">Arbeitsagentur Jobsuche API</h2>
       <div>
         {stellen.length > 0 ? (
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {stellen.map((job, index) => (
               <div
                 key={index}
@@ -56,7 +56,7 @@ export default function Jobs() {
                 <div>
                   <p>{job.arbeitgeber || "Unbekannter Arbeitgeber"}</p>
                   <div className="flex gap-x-2">
-                    <p>{job.arbeitsort?.plz || "PLZ nicht verfügbar - "}</p>
+                    <p>{job.arbeitsort?.plz || "PLZ nicht verfügbar - "},</p>
                     <p>{job.arbeitsort?.ort || "Ort nicht verfügbar"}</p>
                   </div>
                   <p>Eintrittsdatum: {job.eintrittsdatum || "Kein Datum da"}</p>
