@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import Home from "./pages/Home.jsx";
 import Jobs from "./pages/Jobs.jsx";
+import MailGenerator from "./pages/MailGenerator.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -11,6 +12,7 @@ createRoot(document.getElementById("root")).render(
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
         <Route path="jobs" element={<Jobs />} />
+        <Route path="email-generator" element={<MailGenerator />} />
       </Route>
     </Routes>
   </BrowserRouter>,
