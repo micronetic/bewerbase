@@ -5,6 +5,10 @@
 <p>Repository klonen, in das frontendverzeichnis wechseln und folgendes ausführen:</p>
 
 `
+yarn install
+`
+und
+`
 yarn dev
 `
 
