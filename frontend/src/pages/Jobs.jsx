@@ -56,7 +56,7 @@ export default function Jobs() {
                 <div>
                   <p>{job.arbeitgeber || "Unbekannter Arbeitgeber"}</p>
                   <div className="flex gap-x-2">
-                    <p>{job.arbeitsort?.plz || ""}</p>
+                    <p>{job.arbeitsort?.plz || "PLZ nicht verfügbar - "}</p>
                     <p>{job.arbeitsort?.ort || "Ort nicht verfügbar"}</p>
                   </div>
                   <p>Eintrittsdatum: {job.eintrittsdatum || "Kein Datum da"}</p>
