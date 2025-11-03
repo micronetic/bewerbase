@@ -27,7 +27,7 @@ export default function Jobs() {
         }
 
         const result = await response.json();
-        console.log(result);
+        console.log(result.stellenangebote);
         setStellen(result.stellenangebote || []);
       } catch (error) {
         console.log(error.message);
@@ -38,19 +38,29 @@ export default function Jobs() {
   }, []);
   return (
     <div className="flex flex-col items-center gap-y-4">
-      <h2 className="text-3xl capitalize">jobs aus der API sind hier</h2>
-      <p>Arbeitsamt API checken</p>
+      <h2 className="text-3xl capitalize mb-3">Arbeitsagentur Jobsuche API</h2>
       <div>
         {stellen.length > 0 ? (
           <div className="grid grid-cols-3 gap-3">
             {stellen.map((job, index) => (
-              <div key={index} className="bg-dark-secondary p-4 rounded-xl">
-                <h3 className="font-bold text-xl mb-1.5">
-                  {job.beruf || "Kein Titel"}
+              <div
+                key={index}
+                className="flex flex-col gap-y-3 bg-dark-secondary p-4 rounded-xl"
+              >
+                <h3 className="flex flex-col font-bold text-xl mb-1.5">
+                  {job.beruf || "beruf"}
+                  <span className="text-sm font-normal italic">
+                    {job.titel || "Wo Titel"}
+                  </span>
                 </h3>
-                <p>{job.arbeitgeber || "Unbekannter Arbeitgeber"}</p>
-                <p>{job.arbeitsort?.ort || "Ort nicht verfügbar"}</p>
-                <p>Eintrittsdatum: {job.eintrittsdatum || "Kein Datum da"}</p>
+                <div>
+                  <p>{job.arbeitgeber || "Unbekannter Arbeitgeber"}</p>
+                  <div className="flex gap-x-2">
+                    <p>{job.arbeitsort?.plz || ""}</p>
+                    <p>{job.arbeitsort?.ort || "Ort nicht verfügbar"}</p>
+                  </div>
+                  <p>Eintrittsdatum: {job.eintrittsdatum || "Kein Datum da"}</p>
+                </div>
               </div>
             ))}
           </div>
