@@ -60,6 +60,10 @@ export default function Jobs() {
                     <p>{job.arbeitsort?.ort || "Ort nicht verfügbar"}</p>
                   </div>
                   <p>Eintrittsdatum: {job.eintrittsdatum || "Kein Datum da"}</p>
+                  <p>
+                    Veröffentlicht:{" "}
+                    {job.aktuelleVeroeffentlichungsdatum || "Kein Datum da"}
+                  </p>
                 </div>
               </div>
             ))}
