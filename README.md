@@ -4,9 +4,9 @@
 <img width="100" height="100" src="app-icon.png" alt="Application Mate Logo" />
 <p>Repository klonen, in das frontendverzeichnis wechseln und folgendes ausführen:</p>
 
-```bash
+`
 yarn dev
-```
+`
 
 <img src="penpot-screen.png">
 </div>
