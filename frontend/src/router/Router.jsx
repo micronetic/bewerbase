@@ -4,7 +4,7 @@ import Home from "../app/pages/Home.jsx";
 import Jobs from "../app/pages/Jobs.jsx";
 import MailGenerator from "../app/pages/MailGenerator.jsx";
 import Section from "../landing/components/layout/Section.jsx";
-import LandingPage from "../landing/pages/LandingPage.jsx";
+import LandingPage from "../landing/LandingPage.jsx";
 
 export default function Router() {
   return (

@@ -1,0 +1,14 @@
+import Header from "./components/layout/Header";
+import Hero from "./components/layout/Hero";
+import Main from "./components/layout/Main";
+
+export default function LandingPage() {
+  return (
+    <>
+      <Header />
+      <Hero />
+      <Main />
+      {/* <Footer />*/}
+    </>
+  );
+}
