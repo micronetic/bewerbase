@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router";
-import { HomeIcon, JobsIcon, Logo, SidebarIcon } from "../ui/Icons";
+import { HomeIcon, JobsIcon, Logo, SidebarIcon } from "../../../Icons";
 
 const linkClasses =
   "flex items-center gap-x-2.5 p-2.5 rounded-lg transition duration-300 ease-out hover:bg-dark-secondary";
@@ -15,12 +15,12 @@ export default function Sidebar(props) {
   const sideLinks = [
     {
       title: "Home",
-      slug: "/",
+      slug: "/app",
       icon: <HomeIcon />,
     },
     {
       title: "Jobs",
-      slug: "/jobs",
+      slug: "/app/jobs",
       icon: <JobsIcon />,
     },
     // {
@@ -50,6 +50,7 @@ export default function Sidebar(props) {
             <li key={link.slug}>
               <NavLink
                 to={link.slug}
+                end={link.slug === "/app"}
                 className={({ isActive }) =>
                   `${linkClasses} ${isActive ? "bg-dark-secondary" : ""}`
                 }

@@ -1,4 +1,4 @@
-import { CloseIcon } from "./Icons";
+import { CloseIcon } from "../../../Icons";
 
 function saveAction() {
   console.log(form);

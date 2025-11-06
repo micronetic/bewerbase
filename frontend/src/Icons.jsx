@@ -622,3 +622,81 @@ export function GeneratorIcon({ className }) {
     </svg>
   );
 }
+
+export function RocketIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      className="icon icon-tabler icons-tabler-outline icon-tabler-rocket"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <path d="M4 13a8 8 0 0 1 7 7 6 6 0 0 0 3-5 9 9 0 0 0 6-8 3 3 0 0 0-3-3 9 9 0 0 0-8 6 6 6 0 0 0-5 3" />
+      <path d="M7 14a6 6 0 0 0-3 6 6 6 0 0 0 6-3M14 9a1 1 0 1 0 2 0 1 1 0 1 0-2 0" />
+    </svg>
+  );
+}
+
+export function GitLabIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      className="icon icon-tabler icons-tabler-outline icon-tabler-brand-gitlab"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <path d="m21 14-9 7-9-7L6 3l3 7h6l3-7z" />
+    </svg>
+  );
+}
+
+export function TwitterIcon({ className }) {
+  return (
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <path d="m4 4 11.733 16H20L8.267 4zM4 20l6.768-6.768m2.46-2.46L20 4" />
+    </svg>
+  );
+}
+
+export function InstagramIcon({ className }) {
+  return (
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z" />
+      <path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0M16.5 7.5v.01" />
+    </svg>
+  );
+}

@@ -1,6 +1,6 @@
-import Header from "./app/components/layout/Header";
-import MainContainer from "./app/components/layout/MainContainer";
-import Sidebar from "./app/components/layout/Sidebar";
+import Header from "./components/layout/Header";
+import MainContainer from "./components/layout/MainContainer";
+import Sidebar from "./components/layout/Sidebar";
 
 export default function App() {
   return (

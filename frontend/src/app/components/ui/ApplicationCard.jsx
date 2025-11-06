@@ -1,4 +1,4 @@
-import { CalendarIcon, PinIcon, TrashIcon } from "./Icons";
+import { CalendarIcon, PinIcon, TrashIcon } from "../../../Icons";
 import Label from "./Label";
 
 export default function ApplicationCard(props) {

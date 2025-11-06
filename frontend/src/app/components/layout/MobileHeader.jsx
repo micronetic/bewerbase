@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import { CloseIcon, Hamburger, Logo } from "../ui/Icons";
+import { CloseIcon, Hamburger, Logo } from "../../../Icons";
 
 export default function MobileHeader() {
   const [open, setOpen] = useState(false);
