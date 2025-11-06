@@ -14,9 +14,9 @@ const linkClasses =
 export default function Sidebar(props) {
   const [collapsed, setCollapsed] = useState(false);
 
-  const toggleSidebar = () => {
+  function toggleSidebar() {
     setCollapsed((prev) => !prev);
-  };
+  }
 
   const sideLinks = [
     {

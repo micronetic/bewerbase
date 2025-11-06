@@ -38,7 +38,9 @@ export default function Jobs() {
   }, []);
   return (
     <div className="flex flex-col items-center gap-y-4">
-      <h2 className="text-3xl capitalize mb-3">Arbeitsagentur Jobsuche API</h2>
+      <h2 className="text-3xl capitalize mb-3 text-center">
+        Arbeitsagentur Jobsuche API
+      </h2>
       <div>
         {stellen.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">

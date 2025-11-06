@@ -592,7 +592,7 @@ export function CloseIcon({ className, onClick }) {
           d="m4695-64 12-12m-12 0 12 12"
           className="stroke-shape"
           style={{
-            fill: "none",
+            fill: "currentcolor",
             fillOpacity: "none",
             strokeWidth: 1.5,
             stroke: "#6f6f6f",

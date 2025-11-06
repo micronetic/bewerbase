@@ -2,9 +2,9 @@ import { CalendarIcon, PinIcon, TrashIcon } from "./Icons";
 
 export default function ApplicationCard() {
   return (
-    <div className="w-full flex justify-between items-center bg-dark-secondary rounded-lg p-2.5">
-      <div className="flex items-center gap-x-5">
-        <div className="flex justify-center items-center rounded-sm bg-light-grey text-4xl px-6 py-4">
+    <div className="w-full flex justify-between items-center bg-dark-secondary rounded-lg md:p-2.5">
+      <div className="flex items-center gap-x-5 overflow-hidden">
+        <div className="h-full flex justify-center items-center rounded-lg md:rounded-sm bg-light-grey text-4xl px-6 py-6 md:py-4">
           G
         </div>
         <div className="flex flex-col gap-y-1.5">
@@ -15,7 +15,7 @@ export default function ApplicationCard() {
               Offer
             </div>
           </div>
-          <div className="flex gap-x-5">
+          <div className="flex gap-x-3 md:gap-x-5">
             <div className="flex items-center gap-x-1.5">
               <PinIcon className="w-5 h-auto" />
               <p className="text-light-grey text-sm">Los Angeles</p>
