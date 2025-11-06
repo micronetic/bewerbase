@@ -17,10 +17,10 @@ export default function MobileHeader() {
       title: "Jobs",
       slug: "/jobs",
     },
-    {
-      title: "Email generator",
-      slug: "/email-generator",
-    },
+    // {
+    //   title: "Email generator",
+    //   slug: "/email-generator",
+    // },
   ];
   return (
     <div className="w-full flex md:hidden justify-between items-center p-5">

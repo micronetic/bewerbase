@@ -51,7 +51,7 @@ export default function Jobs() {
               >
                 <h3 className="flex flex-col font-bold text-xl mb-1.5">
                   {job.beruf || "beruf"}
-                  <span className="text-sm font-normal italic text-accent">
+                  <span className="text-sm font-normal text-accent">
                     {job.titel || "Wo Titel"}
                   </span>
                 </h3>

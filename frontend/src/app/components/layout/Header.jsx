@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createPortal } from "react-dom";
 import ApplicationForm from "../ui/ApplicationForm";
 import Button from "../ui/Button";
-import { DownloadIcon, PlusIcon } from "../ui/Icons";
+import { PlusIcon } from "../ui/Icons";
 import MobileHeader from "./MobileHeader";
 
 export default function Header() {
@@ -18,7 +18,7 @@ export default function Header() {
             icon={<PlusIcon />}
             title="Add new"
           />
-          <Button icon={<DownloadIcon />} title="Download" />
+          {/* <Button icon={<DownloadIcon />} title="Download" />*/}
         </div>
       </div>
       {showModal &&

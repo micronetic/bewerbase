@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router";
-import {
-  GeneratorIcon,
-  HomeIcon,
-  JobsIcon,
-  Logo,
-  SidebarIcon,
-} from "../ui/Icons";
+import { HomeIcon, JobsIcon, Logo, SidebarIcon } from "../ui/Icons";
 
 const linkClasses =
   "flex items-center gap-x-2.5 p-2.5 rounded-lg transition duration-300 ease-out hover:bg-dark-secondary";
@@ -29,11 +23,11 @@ export default function Sidebar(props) {
       slug: "/jobs",
       icon: <JobsIcon />,
     },
-    {
-      title: "Email generator",
-      slug: "/email-generator",
-      icon: <GeneratorIcon />,
-    },
+    // {
+    //   title: "Email",
+    //   slug: "/email-generator",
+    //   icon: <GeneratorIcon />,
+    // },
   ];
 
   return (

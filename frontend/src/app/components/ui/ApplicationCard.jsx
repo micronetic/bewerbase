@@ -1,6 +1,7 @@
 import { CalendarIcon, PinIcon, TrashIcon } from "./Icons";
+import Label from "./Label";
 
-export default function ApplicationCard() {
+export default function ApplicationCard(props) {
   return (
     <div className="w-full flex justify-between items-center bg-dark-secondary rounded-lg md:p-2.5">
       <div className="flex items-center gap-x-5 overflow-hidden">
@@ -11,9 +12,7 @@ export default function ApplicationCard() {
           <p className="text-light-grey text-sm">Company</p>
           <div className="flex items-center gap-x-1.5">
             <p>Frontend Developer</p>
-            <div className="flex justify-center items-centerpy-1 px-1.5 bg-green rounded-sm text-sm">
-              Offer
-            </div>
+            <Label title={props.labelTitle} bgColor={props.labelColor} />
           </div>
           <div className="flex gap-x-3 md:gap-x-5">
             <div className="flex items-center gap-x-1.5">
