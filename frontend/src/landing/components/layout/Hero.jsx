@@ -6,8 +6,12 @@ export default function Hero() {
   return (
     <section className="w-full flex flex-col justify-center items-center gap-y-12 pt-20 pb-8">
       <div className="flex flex-col gap-y-4 items-center">
-        <h1 className="text-7xl font-bold">Apply. Document.</h1>
-        <p>Turn every application into a springboard for your success.</p>
+        <h1 className="md:text-7xl text-5xl font-bold text-center">
+          Apply. Document.
+        </h1>
+        <p className="text-center">
+          Turn every application into a springboard for your success.
+        </p>
         <div className="flex gap-x-4 mt-4">
           <Link
             to="/app"
