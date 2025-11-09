@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import { InstagramIcon, Logo, TwitterIcon } from "../../../Icons";
+import { InstagramIcon, Logo, TwitterIcon } from "../../../../Icons";
+import style from "./Footer.module.css";
 
 export default function Footer() {
   const [date, setDate] = useState("");
@@ -9,13 +10,13 @@ export default function Footer() {
     setDate(today);
   }, []);
   return (
-    <footer className="w-full flex justify-center items-center bg-black/50 py-40">
-      <div className="flex flex-col items-center gap-y-12">
+    <footer className={style.footer}>
+      <div className={style.footerInner}>
         <Link to="/">
           <Logo />
         </Link>
-        <nav>
-          <ul className="flex items-center gap-x-4">
+        <nav className={style.footerNav}>
+          <ul>
             <li>
               <a href="#">docs.</a>
             </li>
@@ -24,13 +25,13 @@ export default function Footer() {
             </li>
           </ul>
         </nav>
-        <div className="flex items-center gap-x-4">
-          <TwitterIcon className="text-light-grey" />
-          <InstagramIcon className="text-light-grey" />
+        <div className={style.socials}>
+          <TwitterIcon className={style.socialIcon} />
+          <InstagramIcon className={style.socialIcon} />
         </div>
         <span className="flex items-center gap-x-1.5 text-dark-secondary">
           &copy;
-          <p className="footerDate">{date}</p>
+          <p>{date}</p>
         </span>
       </div>
     </footer>
