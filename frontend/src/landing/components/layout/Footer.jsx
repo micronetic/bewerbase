@@ -1,10 +1,13 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { InstagramIcon, Logo, TwitterIcon } from "../../../Icons";
 
 export default function Footer() {
-  const footerDateElement = document.querySelector(".footerDate");
-  const newDate = new Date().getFullYear();
-  footerDateElement.innerText = newDate;
+  const [date, setDate] = useState("");
+  useEffect(() => {
+    const today = new Date().getFullYear();
+    setDate(today);
+  }, []);
   return (
     <footer className="w-full flex justify-center items-center bg-black/50 py-40">
       <div className="flex flex-col items-center gap-y-12">
@@ -27,7 +30,7 @@ export default function Footer() {
         </div>
         <span className="flex items-center gap-x-1.5 text-dark-secondary">
           &copy;
-          <p className="footerDate"></p>
+          <p className="footerDate">{date}</p>
         </span>
       </div>
     </footer>
