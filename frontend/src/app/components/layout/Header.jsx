@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { createPortal } from "react-dom";
+import { Activity, useState } from "react";
 import { PlusIcon } from "../../../Icons";
 import ApplicationForm from "../ui/ApplicationForm";
 import Button from "../ui/Button";
@@ -21,11 +20,9 @@ export default function Header() {
           {/* <Button icon={<DownloadIcon />} title="Download" />*/}
         </div>
       </div>
-      {showModal &&
-        createPortal(
-          <ApplicationForm onClose={() => setShowModal(false)} />,
-          document.body,
-        )}
+      <Activity mode={showModal ? "visible" : "hidden"}>
+        <ApplicationForm onClose={() => setShowModal(false)} />
+      </Activity>
     </header>
   );
 }

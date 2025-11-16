@@ -8,7 +8,7 @@ export default function ApplicationForm(props) {
   const inputStyles = `border border-dark-secondary rounded-lg px-3 py-2 resize-none`;
   const labelStyles = `flex flex-col gap-y-2 text-light-grey`;
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
       <div className="bg-dark-primary rounded-xl border border-dark-secondary p-6 w-[393px]">
         <div className="w-full flex justify-end items-center mb-2">
           <CloseIcon onClick={props.onClose} className="cursor-pointer" />
