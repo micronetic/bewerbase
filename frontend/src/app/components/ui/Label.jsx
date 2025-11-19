@@ -1,9 +1,16 @@
-export default function Label(props) {
+const statusColors = {
+  Offer: "bg-green",
+  Pending: "bg-amber",
+  Rejected: "bg-red",
+};
+
+export default function Label({ title }) {
+  const color = statusColors[title] || "bg-light-grey";
   return (
     <div
-      className={`flex justify-center items-centerpy-1 px-1.5 ${props.bgColor} rounded-sm text-sm`}
+      className={`flex justify-center items-center py-1 px-1.5 ${color} rounded-sm text-sm`}
     >
-      {props.title}
+      {title}
     </div>
   );
 }
