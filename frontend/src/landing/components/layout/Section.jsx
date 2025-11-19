@@ -15,14 +15,16 @@ export default function Section() {
           <div className="flex justify-center items-center px-5 md:py-8 md:px-28">
             <div className="flex flex-col gap-y-4">
               <h3 className="text-2xl md:text-4xl text-center md:text-left">
-                Überschrift
+                Log New Application
               </h3>
               <p className="w-full">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est Lorem ipsum dolor sit amet.
+                Use this simple form to capture all the essential details of a
+                new job application directly into your tracking system. Log the
+                company, the specific job title, the submission date, and the
+                location to ensure your applications are organized from the
+                start. With the dedicated Status and Notes fields, you can
+                easily monitor the current progress and keep track of important
+                information
               </p>
             </div>
           </div>
@@ -38,14 +40,14 @@ export default function Section() {
           <div className="flex justify-center items-center px-5 md:py-8 md:px-28">
             <div className="flex flex-col gap-y-4">
               <h3 className="text-2xl md:text-4xl text-center md:text-left">
-                Überschrift
+                View Application Details
               </h3>
               <p className="w-full">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est Lorem ipsum dolor sit amet.
+                This detail modal provides a comprehensive overview of a saved
+                job application within your tracking system. Instantly review
+                the company, position, application date, and location, and use
+                the quick status buttons ('Offer', 'Pending', 'Rejected') to
+                easily update the application's progress.
               </p>
             </div>
           </div>
