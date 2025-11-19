@@ -5,7 +5,7 @@ import Section from "./components/layout/Section";
 
 export default function LandingPage() {
   return (
-    <div className="h-screen md:bg-radial-[at_50%_-30%] from-accent to-dark-primary to-70%">
+    <div className="h-screen">
       <Header />
       <Hero />
       <Section />
