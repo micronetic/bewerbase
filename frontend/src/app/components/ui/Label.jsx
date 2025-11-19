@@ -4,13 +4,13 @@ const statusColors = {
   Rejected: "bg-red",
 };
 
-export default function Label({ title }) {
-  const color = statusColors[title] || "bg-light-grey";
+export default function Label({ labelTitle }) {
+  const color = statusColors[labelTitle] || "bg-light-grey";
   return (
     <div
       className={`flex justify-center items-center py-1 px-1.5 ${color} rounded-sm text-sm`}
     >
-      {title}
+      {labelTitle}
     </div>
   );
 }

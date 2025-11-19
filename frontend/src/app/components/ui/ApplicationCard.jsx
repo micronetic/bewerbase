@@ -1,7 +1,7 @@
 import { CalendarIcon, PinIcon, TrashIcon } from "../../../Icons";
 import Label from "./Label";
 
-export default function ApplicationCard({ title }) {
+export default function ApplicationCard({ labelTitle }) {
   return (
     <div className="w-full flex justify-between items-center bg-dark-secondary rounded-lg md:p-2.5">
       <div className="flex items-center gap-x-5 overflow-hidden">
@@ -12,7 +12,7 @@ export default function ApplicationCard({ title }) {
           <p className="text-light-grey text-sm">Company</p>
           <div className="flex items-center gap-x-1.5">
             <p>Frontend Developer</p>
-            <Label title={title} />
+            <Label labelTitle={labelTitle} />
           </div>
           <div className="flex gap-x-3 md:gap-x-5">
             <div className="flex items-center gap-x-1.5">
