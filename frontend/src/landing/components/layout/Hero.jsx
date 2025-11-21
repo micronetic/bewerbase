@@ -1,10 +1,10 @@
 import { Link } from "react-router";
 import { GitLabIcon, RocketIcon } from "../../../Icons";
-import heroImage from "../../assets/img/hero-image.webp";
+import heroImage from "../../assets/img/hero-image.png";
 
 export default function Hero() {
   return (
-    <section className="w-full flex flex-col justify-center items-center gap-y-12 pt-20 pb-8">
+    <section className="w-full flex flex-col justify-center items-center gap-y-12 pt-20 pb-8 md:bg-radial-[at_50%_50%] from-accent to-dark-primary to-55%">
       <div className="flex flex-col gap-y-4 items-center">
         <h1 className="md:text-7xl text-5xl font-bold text-center">
           Apply. Document.
@@ -32,7 +32,7 @@ export default function Hero() {
       </div>
       <img
         src={heroImage}
-        className="w-3/4 border border-white/20 p-3 rounded-xl bg-white/10 shadow-dark-primary"
+        className="w-11/12 md:w-3/4 border border-white/20 md:p-3 p-1 rounded-xl bg-white/10 shadow-dark-primary"
         alt="app screenshot"
       />
     </section>
