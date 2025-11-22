@@ -10,7 +10,9 @@ export default function Home() {
   const [applications, setApplications] = useState([]);
 
   function handleAddApplication(data) {
-    setApplications((prev) => [...prev, data]);
+    setApplications(function (prev) {
+      return [...prev, data];
+    });
   }
   // const applications = [
   //   {

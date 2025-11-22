@@ -17,7 +17,9 @@ export default function ApplicationForm({ onClose, onSubmit }) {
 
   function handleChange(event) {
     const { name, value } = event.target;
-    setFormData((prevState) => ({ ...prevState, [name]: value }));
+    setFormData(function (prevState) {
+      return { ...prevState, [name]: value };
+    });
   }
 
   function handleSubmit(event) {
