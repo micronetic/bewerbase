@@ -5,7 +5,7 @@ import Section from "./components/layout/Section";
 
 export default function LandingPage() {
   return (
-    <div className="h-screen">
+    <div className="h-screen selection:bg-accent">
       <Header />
       <Hero />
       <Section />

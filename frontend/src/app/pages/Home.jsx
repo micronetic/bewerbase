@@ -11,7 +11,7 @@ export default function Home() {
     {
       id: 1,
       labelTitle: "Offer",
-      company: "Firmenname",
+      company: "Google",
       jobTitle: "Frontend Developer",
       location: "Köln",
       date: "23.12.2025",
@@ -19,7 +19,7 @@ export default function Home() {
     {
       id: 2,
       labelTitle: "Pending",
-      company: "Firmenname",
+      company: "Meta",
       jobTitle: "Fullstack Developer",
       location: "Düsseldorf",
       date: "15.12.2026",

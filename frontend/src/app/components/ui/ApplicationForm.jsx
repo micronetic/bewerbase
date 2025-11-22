@@ -1,7 +1,7 @@
 import { CloseIcon } from "../../../Icons";
 
 export default function ApplicationForm({ onClose }) {
-  const inputStyles = `border border-dark-secondary rounded-lg px-3 py-2 resize-none`;
+  const inputStyles = `border border-dark-secondary rounded-lg px-3 py-2 resize-none focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent`;
   const labelStyles = `flex flex-col gap-y-2 text-light-grey`;
 
   return (

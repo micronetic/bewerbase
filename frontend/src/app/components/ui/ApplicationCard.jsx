@@ -9,10 +9,10 @@ export default function ApplicationCard({
   date,
 }) {
   return (
-    <div className="w-full flex justify-between items-center bg-dark-secondary rounded-lg md:p-2.5">
+    <div className="w-full flex justify-between items-center bg-dark-secondary rounded-lg px-2 py-1 md:px-2">
       <div className="flex items-center gap-x-5 overflow-hidden">
-        <div className="h-full flex justify-center items-center rounded-lg md:rounded-sm bg-light-grey text-4xl px-6 py-6 md:py-4">
-          G
+        <div className="w-16 h-16 flex justify-center items-center rounded-sm bg-light-grey text-4xl">
+          {company.charAt(0).toUpperCase()}
         </div>
         <div className="flex flex-col gap-y-1.5">
           <p className="text-light-grey text-sm">{company}</p>

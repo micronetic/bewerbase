@@ -4,7 +4,7 @@ import heroImage from "../../assets/img/hero-image.png";
 
 export default function Hero() {
   return (
-    <section className="w-full flex flex-col justify-center items-center gap-y-12 pt-20 pb-8 md:bg-radial-[at_50%_50%] from-accent to-dark-primary to-55%">
+    <section className="w-full flex flex-col justify-center items-center gap-y-12 pt-20 pb-8 mt-10 md:bg-radial-[at_50%_50%] from-accent to-dark-primary to-55%">
       <div className="flex flex-col gap-y-4 items-center">
         <h1 className="md:text-7xl text-5xl font-bold text-center">
           Apply. Document.
@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="flex gap-x-4 mt-4">
           <Link
             to="/app"
-            className="bg-accent py-3 px-4 rounded-lg flex justify-center items-center gap-x-3"
+            className="bg-accent py-3 px-4 rounded-lg flex justify-center items-center gap-x-3 hover:ring-2 hover:ring-inset hover:ring-white/50 transition duration-200 ease-in-out"
           >
             <RocketIcon />
             Start Now
