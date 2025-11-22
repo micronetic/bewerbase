@@ -5,7 +5,7 @@ import { HomeIcon, JobsIcon, Logo, SidebarIcon } from "../../../Icons";
 const linkClasses =
   "flex items-center gap-x-2.5 p-2.5 rounded-lg transition duration-300 ease-out hover:bg-dark-secondary";
 
-export default function Sidebar(props) {
+export default function Sidebar({ hideMobile }) {
   const [collapsed, setCollapsed] = useState(false);
 
   function toggleSidebar() {
@@ -32,17 +32,17 @@ export default function Sidebar(props) {
 
   return (
     <aside
-      className={`${collapsed ? "w-[60px] px-2" : "w-[350px] px-7"} ${props.hideMobile ? "hidden md:flex flex-col gap-y-12 py-6 transition-all duration-200 ease-out border-r border-r-light-grey/20" : ""}`}
+      className={`flex-col gap-y-12 py-6 transition-all duration-200 ease-out border-r border-r-light-grey/20 ${collapsed ? "w-[60px] px-2" : "w-[350px] px-6"} ${hideMobile ? "hidden md:flex" : ""}`}
     >
-      <div className="flex justify-between items-center p-2.5">
+      <div
+        className={`flex items-center ${collapsed ? "justify-center" : "justify-between"}`}
+      >
         {!collapsed && (
           <Link to="/">
             <Logo className="hover:text-accent transition duration-200" />
           </Link>
         )}
-        <button onClick={toggleSidebar} className="cursor-pointer">
-          <SidebarIcon />
-        </button>
+        <SidebarIcon onClick={toggleSidebar} />
       </div>
       <nav>
         <ul className="flex flex-col gap-y-2.5">

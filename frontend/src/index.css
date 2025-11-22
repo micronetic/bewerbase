@@ -8,6 +8,16 @@
   --color-green: #16a34a;
   --color-red: #dc2626;
   --color-light-grey: #6f6f6f;
+
+  --animate-fadeIn: fadeIn 0.2s ease-out;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 @font-face {

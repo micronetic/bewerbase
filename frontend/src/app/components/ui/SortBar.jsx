@@ -33,12 +33,6 @@ export default function SortBar() {
           </button>
         ))}
       </div>
-      {/* <input
-        name="searchField"
-        type="search"
-        placeholder="Search"
-        className="py-2.5 px-5 text-light-grey bg-dark-secondary rounded-lg"
-      />*/}
     </div>
   );
 }

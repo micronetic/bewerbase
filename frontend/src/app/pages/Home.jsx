@@ -1,7 +1,12 @@
+import { Activity, useState } from "react";
+import { PlusIcon } from "../../Icons";
 import ApplicationCard from "../components/ui/ApplicationCard";
+import ApplicationForm from "../components/ui/ApplicationForm";
+import Button from "../components/ui/Button";
 import SortBar from "../components/ui/SortBar";
 
 export default function Home() {
+  const [showModal, setShowModal] = useState(false);
   const applications = [
     {
       id: 1,
@@ -39,7 +44,15 @@ export default function Home() {
   const numApplications = applications.length;
   return (
     <div className="w-full flex flex-col items-center gap-y-5">
-      <SortBar />
+      <div className="w-full flex flex-col md:flex-row items-center justify-between gap-5">
+        <SortBar />
+        <Button
+          onClick={() => setShowModal(true)}
+          icon={<PlusIcon />}
+          title="Add new"
+        />
+        {/* <Button icon={<DownloadIcon />} title="Download" />*/}
+      </div>
       {numApplications > 0 ? (
         applications.map((app) => (
           <ApplicationCard
@@ -54,6 +67,9 @@ export default function Home() {
       ) : (
         <p>No entries yet. Add a new one</p>
       )}
+      <Activity mode={showModal ? "visible" : "hidden"}>
+        <ApplicationForm onClose={() => setShowModal(false)} />
+      </Activity>
     </div>
   );
 }
