@@ -25,7 +25,9 @@ export default function ApplicationCard({ data }) {
             </div>
             <div className="flex items-center gap-x-1.5">
               <CalendarIcon className="w-5 h-auto" />
-              <p className="text-light-grey text-sm">{data.date}</p>
+              <p className="text-light-grey text-sm">
+                {new Date(data.date).toLocaleDateString("de-DE")}
+              </p>
             </div>
           </div>
         </div>
