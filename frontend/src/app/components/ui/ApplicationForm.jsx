@@ -30,10 +30,6 @@ export default function ApplicationForm({ onClose, onSubmit }) {
     onClose();
   }
 
-  function resetForm() {
-    setFormData(initialFormData);
-  }
-
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
       <div className="bg-dark-primary rounded-xl border border-dark-secondary p-6 w-[375px]">
@@ -98,7 +94,7 @@ export default function ApplicationForm({ onClose, onSubmit }) {
               required
               className={inputStyles}
             >
-              <option value="default">Choose Status</option>
+              <option>Choose Status</option>
               <option>Offer</option>
               <option>Pending</option>
               <option>Rejected</option>
@@ -117,7 +113,7 @@ export default function ApplicationForm({ onClose, onSubmit }) {
             </button>
             <button
               type="button"
-              onClick={resetForm}
+              onClick={() => setFormData(initialFormData)}
               className="w-full bg-dark-secondary py-4 px-5 rounded-md cursor-pointer"
             >
               Reset
