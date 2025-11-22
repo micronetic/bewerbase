@@ -38,7 +38,11 @@ export default function ApplicationForm({ onClose, onSubmit }) {
         <div className="w-full flex justify-end items-center mb-2">
           <CloseIcon onClick={onClose} className="cursor-pointer" />
         </div>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-y-5">
+        <form
+          onSubmit={handleSubmit}
+          autoComplete="off"
+          className="flex flex-col gap-y-5"
+        >
           <label className={labelStyles}>
             Company
             <input
