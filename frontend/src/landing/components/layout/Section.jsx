@@ -1,4 +1,3 @@
-import detailsScreenshot from "../../assets/img/details-screenshot.webp";
 import formScreenshot from "../../assets/img/form-screenshot.webp";
 
 export default function Section() {
@@ -36,7 +35,7 @@ export default function Section() {
             />
           </div>
         </div>
-        <div className="w-full grid grid-cols-1 md:grid-cols-2">
+        {/* <div className="w-full grid grid-cols-1 md:grid-cols-2">
           <div className="flex justify-center items-center px-5 md:py-8 md:px-28">
             <div className="flex flex-col gap-y-4">
               <h3 className="text-2xl md:text-4xl text-center md:text-left">
@@ -58,7 +57,7 @@ export default function Section() {
               className="w-auto h-4/5 shadow-2xl shadow-black/30"
             />
           </div>
-        </div>
+        </div>*/}
       </section>
     </>
   );
