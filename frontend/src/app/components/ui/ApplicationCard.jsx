@@ -17,7 +17,9 @@ export default function ApplicationCard({
         <div className="flex flex-col gap-y-1.5">
           <p className="text-light-grey text-sm">{company}</p>
           <div className="flex items-center gap-x-1.5">
-            <p>{jobTitle}</p>
+            <p className="text-lg md:text-xl truncate max-w-44 md:max-w-none">
+              {jobTitle}
+            </p>
             <Label labelTitle={labelTitle} />
           </div>
           <div className="flex gap-x-3 md:gap-x-5">
