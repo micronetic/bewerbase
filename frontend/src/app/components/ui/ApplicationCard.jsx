@@ -1,35 +1,29 @@
 import { CalendarIcon, PinIcon, TrashIcon } from "../../../Icons";
 import Label from "./Label";
 
-export default function ApplicationCard({
-  labelTitle,
-  company,
-  jobTitle,
-  location,
-  date,
-}) {
+export default function ApplicationCard({ data }) {
   return (
     <div className="w-full flex justify-between items-center bg-dark-secondary rounded-lg px-2 py-1 md:px-2">
       <div className="flex items-center gap-x-5 overflow-hidden">
         <div className="w-16 h-16 flex justify-center items-center rounded-sm bg-light-grey text-4xl">
-          {company.charAt(0).toUpperCase()}
+          {data.company.charAt(0).toUpperCase()}
         </div>
         <div className="flex flex-col gap-y-1.5">
-          <p className="text-light-grey text-sm">{company}</p>
+          <p className="text-light-grey text-sm">{data.company}</p>
           <div className="flex items-center gap-x-1.5">
             <p className="text-lg md:text-xl truncate max-w-44 md:max-w-none">
-              {jobTitle}
+              {data.job}
             </p>
-            <Label labelTitle={labelTitle} />
+            <Label labelTitle={data.status} />
           </div>
           <div className="flex gap-x-3 md:gap-x-5">
             <div className="flex items-center gap-x-1.5">
               <PinIcon className="w-5 h-auto" />
-              <p className="text-light-grey text-sm">{location}</p>
+              <p className="text-light-grey text-sm">{data.location}</p>
             </div>
             <div className="flex items-center gap-x-1.5">
               <CalendarIcon className="w-5 h-auto" />
-              <p className="text-light-grey text-sm">{date}</p>
+              <p className="text-light-grey text-sm">{data.date}</p>
             </div>
           </div>
         </div>

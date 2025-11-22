@@ -1,8 +1,36 @@
+import { useState } from "react";
 import { CloseIcon } from "../../../Icons";
 
-export default function ApplicationForm({ onClose }) {
+export default function ApplicationForm({ onClose, onSubmit }) {
   const inputStyles = `border border-dark-secondary rounded-lg px-3 py-2 resize-none focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent`;
   const labelStyles = `flex flex-col gap-y-2 text-light-grey`;
+
+  const initialFormData = {
+    company: "",
+    job: "",
+    date: "",
+    location: "",
+    status: "no status",
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(formData);
+    onSubmit(formData);
+    setFormData(initialFormData);
+    onClose();
+  }
+
+  function resetForm() {
+    setFormData(initialFormData);
+  }
 
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
@@ -10,37 +38,60 @@ export default function ApplicationForm({ onClose }) {
         <div className="w-full flex justify-end items-center mb-2">
           <CloseIcon onClick={onClose} className="cursor-pointer" />
         </div>
-        <form className="flex flex-col gap-y-5">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-y-5">
           <label className={labelStyles}>
             Company
             <input
               type="text"
               name="company"
-              autoComplete="on"
+              value={formData.company}
+              onChange={handleChange}
               required
               className={inputStyles}
             />
           </label>
           <label className={labelStyles}>
             Job
-            <input type="text" name="job" required className={inputStyles} />
+            <input
+              type="text"
+              name="job"
+              value={formData.job}
+              onChange={handleChange}
+              required
+              className={inputStyles}
+            />
           </label>
           <label className={labelStyles}>
             Date
-            <input type="date" name="date" required className={inputStyles} />
+            <input
+              type="date"
+              name="date"
+              value={formData.date}
+              onChange={handleChange}
+              required
+              className={inputStyles}
+            />
           </label>
           <label className={labelStyles}>
             Location
             <input
               type="text"
               name="location"
+              value={formData.location}
+              onChange={handleChange}
               required
               className={inputStyles}
             />
           </label>
           <label className={labelStyles}>
             Status
-            <select name="status" required className={inputStyles}>
+            <select
+              name="status"
+              value={formData.status}
+              onChange={handleChange}
+              required
+              className={inputStyles}
+            >
               <option value="default">Choose Status</option>
               <option>Offer</option>
               <option>Pending</option>
@@ -59,7 +110,8 @@ export default function ApplicationForm({ onClose }) {
               Save
             </button>
             <button
-              type="reset"
+              type="button"
+              onClick={resetForm}
               className="w-full bg-dark-secondary py-4 px-5 rounded-md cursor-pointer"
             >
               Reset
