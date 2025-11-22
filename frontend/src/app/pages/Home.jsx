@@ -63,7 +63,7 @@ export default function Home() {
           <ApplicationCard key={index} data={app} />
         ))
       ) : (
-        <p>No entries yet. Add a new one</p>
+        <p className="text-xl mt-5">No entries yet. Add a new one</p>
       )}
       <Activity mode={showModal ? "visible" : "hidden"}>
         <ApplicationForm
