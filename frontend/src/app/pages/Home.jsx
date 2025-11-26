@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import { Activity, useState } from "react";
 import { PlusIcon } from "../../Icons";
 import ApplicationCard from "../components/ui/ApplicationCard";
@@ -11,9 +12,15 @@ export default function Home() {
 
   function handleAddApplication(data) {
     setApplications(function (prev) {
-      return [...prev, data];
+      return [...prev, { ...data, id: nanoid() }];
     });
   }
+
+  function deleteApplication(id) {
+    console.log(id);
+    setApplications((prev) => prev.filter((app) => app.id !== id));
+  }
+
   // const applications = [
   //   {
   //     id: 1,
@@ -61,8 +68,12 @@ export default function Home() {
         {/* <Button icon={<DownloadIcon />} title="Download" />*/}
       </div>
       {numApplications > 0 ? (
-        applications.map((app, index) => (
-          <ApplicationCard key={index} data={app} />
+        applications.map((app) => (
+          <ApplicationCard
+            key={app.id}
+            data={app}
+            deleteApplication={deleteApplication}
+          />
         ))
       ) : (
         <p className="text-xl mt-5">No entries yet. Add a new one</p>

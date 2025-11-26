@@ -1,7 +1,7 @@
 import { CalendarIcon, PinIcon, TrashIcon } from "../../../Icons";
 import Label from "./Label";
 
-export default function ApplicationCard({ data }) {
+export default function ApplicationCard({ data, deleteApplication }) {
   return (
     <div className="w-full flex justify-between items-center bg-dark-secondary rounded-lg px-2 py-1 md:px-2">
       <div className="flex items-center gap-x-5 overflow-hidden">
@@ -32,7 +32,11 @@ export default function ApplicationCard({ data }) {
           </div>
         </div>
       </div>
-      <button className="cursor-pointer p-1.5 rounded-sm text-light-grey hover:bg-dark-primary hover:text-red transition duration-200">
+      <button
+        type="button"
+        onClick={() => deleteApplication(data.id)}
+        className="cursor-pointer p-1.5 rounded-sm text-light-grey hover:bg-dark-primary hover:text-red transition duration-200"
+      >
         <TrashIcon />
       </button>
     </div>
