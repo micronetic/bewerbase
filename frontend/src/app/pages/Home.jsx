@@ -18,7 +18,9 @@ export default function Home() {
 
   function deleteApplication(id) {
     console.log(id);
-    setApplications((prev) => prev.filter((app) => app.id !== id));
+    setApplications(function (prev) {
+      prev.filter((app) => app.id !== id);
+    });
   }
 
   // const applications = [
