@@ -11,6 +11,7 @@ export default function ApplicationForm({ onClose, onSubmit }) {
     date: "",
     location: "",
     status: "no status",
+    notes: "",
   };
 
   const [formData, setFormData] = useState(initialFormData);
@@ -100,10 +101,16 @@ export default function ApplicationForm({ onClose, onSubmit }) {
               <option>Rejected</option>
             </select>
           </label>
-          {/* <label className={labelStyles}>
+          <label className={labelStyles}>
             Notes
-            <textarea name="notes" rows="5" className={inputStyles}></textarea>
-          </label>*/}
+            <textarea
+              value={formData.notes}
+              onChange={handleChange}
+              name="notes"
+              rows="5"
+              className={inputStyles}
+            ></textarea>
+          </label>
           <div className="flex gap-x-2">
             <button
               type="submit"

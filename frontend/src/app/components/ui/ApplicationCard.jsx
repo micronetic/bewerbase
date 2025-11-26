@@ -1,10 +1,17 @@
+import { Activity, useState } from "react";
 import { CalendarIcon, PinIcon, TrashIcon } from "../../../Icons";
+import ApplicationInfo from "./ApplicationInfo";
 import Label from "./Label";
 
 export default function ApplicationCard({ data, deleteApplication }) {
+  const [openAppCard, setOpenAppCard] = useState(false);
+
   return (
-    <div className="w-full flex justify-between items-center bg-dark-secondary rounded-lg px-2 py-1 md:px-2">
-      <div className="flex items-center gap-x-5 overflow-hidden">
+    <div
+      onClick={() => setOpenAppCard(true)}
+      className="w-full flex justify-between items-center bg-dark-secondary rounded-lg px-2 py-1 md:px-2"
+    >
+      <div className="flex items-center gap-x-5">
         <div className="w-16 h-16 flex justify-center items-center rounded-sm bg-light-grey text-4xl uppercase">
           {data.company.charAt(0)}
         </div>
@@ -39,6 +46,9 @@ export default function ApplicationCard({ data, deleteApplication }) {
       >
         <TrashIcon />
       </button>
+      <Activity mode={openAppCard ? "visible" : "hidden"}>
+        <ApplicationInfo onClose={() => setOpenAppCard(false)} data={data} />
+      </Activity>
     </div>
   );
 }

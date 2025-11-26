@@ -1,11 +1,11 @@
-export default function Button(props) {
+export default function Button({ onClick, icon, title, color }) {
   return (
     <button
-      onClick={props.onClick}
-      className="min-w-fit flex items-center bg-dark-secondary px-4 py-2 rounded-lg gap-x-5 cursor-pointer"
+      onClick={onClick}
+      className={`min-w-fit flex items-center ${color} px-4 py-2 rounded-lg gap-x-5 cursor-pointer`}
     >
-      {props.icon}
-      {props.title}
+      {icon}
+      {title}
     </button>
   );
 }

@@ -28,7 +28,9 @@ export default function MobileHeader() {
   ];
   return (
     <div className="w-full flex md:hidden justify-between items-center p-6">
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
       <Hamburger onClick={openMenu} />
       {open && (
         <div className="fixed inset-0 w-full h-screen flex flex-col items-center bg-dark-primary/80 backdrop-blur-lg p-5 animate-fadeIn">

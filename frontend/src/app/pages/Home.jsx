@@ -66,6 +66,7 @@ export default function Home() {
           onClick={() => setShowModal(true)}
           icon={<PlusIcon />}
           title="Add new"
+          color="bg-dark-secondary"
         />
         {/* <Button icon={<DownloadIcon />} title="Download" />*/}
       </div>
