@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-import { Activity, useState } from "react";
+import { Activity, useEffect, useState } from "react";
 import { PlusIcon } from "../../Icons";
 import ApplicationCard from "../components/ui/ApplicationCard";
 import ApplicationForm from "../components/ui/ApplicationForm";
@@ -9,6 +9,17 @@ import SortBar from "../components/ui/SortBar";
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const [applications, setApplications] = useState([]);
+
+  useEffect(() => {
+    const ls = localStorage.getItem("applications");
+    if (ls) {
+      setApplications(JSON.parse(ls));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("applications", JSON.stringify(applications));
+  }, [applications]);
 
   function handleAddApplication(data) {
     setApplications(function (prev) {
