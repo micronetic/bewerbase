@@ -19,13 +19,13 @@ export default function ApplicationInfo({ onClose, data }) {
               <p className="text-light-grey">
                 Applied on {new Date(data.date).toLocaleDateString("de-DE")}
               </p>
-              <div className="flex justify-center gap-x-1.5">
-                <PinIcon className="w-5 h-auto" />
-                <p className="text-light-grey text-sm capitalize">
+              <div className="flex items-center gap-x-3">
+                <p className="flex items-center gap-x-1 text-light-grey text-sm capitalize">
+                  <PinIcon className="w-5 h-auto" />
                   {data.location}
                 </p>
+                <Label labelTitle={data.status} />
               </div>
-              <Label labelTitle={data.status} />
             </div>
             <div className="flex flex-col gap-y-2">
               <h3 className="text-lg font-bold">Notes</h3>

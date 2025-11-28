@@ -24,18 +24,14 @@ export default function ApplicationCard({ data, deleteApplication }) {
             <Label labelTitle={data.status} />
           </div>
           <div className="flex gap-x-3 md:gap-x-5">
-            <div className="flex items-center gap-x-1.5">
+            <p className="flex items-center gap-x-1 text-light-grey text-sm capitalize">
               <PinIcon className="w-5 h-auto" />
-              <p className="text-light-grey text-sm capitalize">
-                {data.location}
-              </p>
-            </div>
-            <div className="flex items-center gap-x-1.5">
+              {data.location}
+            </p>
+            <p className="flex items-center gap-x-1 text-light-grey text-sm">
               <CalendarIcon className="w-5 h-auto" />
-              <p className="text-light-grey text-sm">
-                {new Date(data.date).toLocaleDateString("de-DE")}
-              </p>
-            </div>
+              {new Date(data.date).toLocaleDateString("de-DE")}
+            </p>
           </div>
         </div>
       </div>
