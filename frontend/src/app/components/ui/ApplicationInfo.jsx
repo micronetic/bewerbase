@@ -19,7 +19,7 @@ export default function ApplicationInfo({ onClose, data }) {
               <p className="text-light-grey">
                 Applied on {new Date(data.date).toLocaleDateString("de-DE")}
               </p>
-              <div className="flex justify-center items-center gap-x-1.5">
+              <div className="flex justify-center gap-x-1.5">
                 <PinIcon className="w-5 h-auto" />
                 <p className="text-light-grey text-sm capitalize">
                   {data.location}
