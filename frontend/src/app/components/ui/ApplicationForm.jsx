@@ -10,7 +10,7 @@ export default function ApplicationForm({ onClose, onSubmit }) {
     job: "",
     date: "",
     location: "",
-    status: "no status",
+    status: "not set",
     notes: "",
   };
 
