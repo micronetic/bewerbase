@@ -10,7 +10,7 @@ export default function ApplicationInfo({ onClose, data }) {
           className="flex flex-col items-center gap-y-2 bg-dark-primary rounded-xl border border-dark-secondary p-6 w-[375px]"
         >
           <CloseIcon onClick={onClose} className="self-end cursor-pointer" />
-          <div className="flex flex-col gap-y-9">
+          <div className="w-full flex flex-col gap-y-9">
             <div className="flex flex-col items-center gap-y-1.5">
               <h2 className="text-white text-4xl font-bold capitalize">
                 {data.company}
@@ -27,7 +27,7 @@ export default function ApplicationInfo({ onClose, data }) {
               </div>
               <Label labelTitle={data.status} />
             </div>
-            <div className=" w-full flex flex-col gap-y-2">
+            <div className="flex flex-col gap-y-2">
               <h3 className="text-lg font-bold">Notes</h3>
               <p>{data.notes}</p>
             </div>

@@ -71,7 +71,7 @@ export default function Jobs() {
             ))}
           </div>
         ) : (
-          "Keine Jobs gefunden..."
+          <p className="text-xl mt-5">Keine Jobs gefunden...</p>
         )}
       </div>
     </div>

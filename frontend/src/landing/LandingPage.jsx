@@ -8,7 +8,9 @@ export default function LandingPage() {
     <div className="h-screen selection:bg-accent">
       <Header />
       <Hero />
-      <Section />
+      <main className="w-full flex justify-center">
+        <Section />
+      </main>
       <Footer />
     </div>
   );
