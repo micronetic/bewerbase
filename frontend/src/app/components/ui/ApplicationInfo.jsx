@@ -12,7 +12,7 @@ export default function ApplicationInfo({ onClose, data }) {
               <h2 className="text-white text-4xl font-bold capitalize">
                 {data.company}
               </h2>
-              <p>{data.job}</p>
+              <p className="text-center">{data.job}</p>
               <p className="text-light-grey">
                 Applied on {new Date(data.date).toLocaleDateString("de-DE")}
               </p>

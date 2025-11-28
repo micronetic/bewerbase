@@ -1,47 +1,49 @@
 import { Activity, useState } from "react";
 import { CalendarIcon, PinIcon, TrashIcon } from "../../../Icons";
 import ApplicationInfo from "./ApplicationInfo";
+import Button from "./Button";
 import Label from "./Label";
 
 export default function ApplicationCard({ data, deleteApplication }) {
   const [openAppCard, setOpenAppCard] = useState(false);
 
   return (
-    <div className="w-full flex justify-between items-center bg-dark-secondary rounded-lg px-2 py-1 md:px-2">
-      <div className="flex items-center gap-x-5">
-        <div className="w-16 h-16 flex justify-center items-center rounded-sm bg-light-grey text-4xl uppercase">
-          {data.company.charAt(0)}
-        </div>
-        <div className="flex flex-col gap-y-1.5">
-          <p className="text-light-grey text-sm capitalize">{data.company}</p>
-          <div className="flex items-center gap-x-1.5">
-            <p
-              onClick={() => setOpenAppCard(true)}
-              className="text-lg md:text-xl truncate max-w-44 md:max-w-none capitalize hover:text-accent duration-200 ease-out cursor-pointer"
-            >
-              {data.job}
-            </p>
-            <Label labelTitle={data.status} />
+    <div className="w-full flex md:flex-row flex-col gap-y-2 md:gap-x-3 md:items-center bg-dark-secondary rounded-lg px-2 py-1 md:px-2">
+      <div className="w-full flex justify-between items-center">
+        <div className="flex items-center gap-x-5">
+          <div className="w-16 h-16 flex shrink-0 justify-center items-center rounded-sm bg-light-grey text-4xl uppercase">
+            {data.company.charAt(0)}
           </div>
-          <div className="flex gap-x-3 md:gap-x-5">
-            <p className="flex items-center gap-x-1 text-light-grey text-sm capitalize">
-              <PinIcon className="w-5 h-auto" />
-              {data.location}
-            </p>
-            <p className="flex items-center gap-x-1 text-light-grey text-sm">
-              <CalendarIcon className="w-5 h-auto" />
-              {new Date(data.date).toLocaleDateString("de-DE")}
-            </p>
+          <div className="flex flex-col gap-y-1.5">
+            <p className="text-light-grey text-sm capitalize">{data.company}</p>
+            <div className="flex items-center gap-x-1.5">
+              <p
+                onClick={() => setOpenAppCard(true)}
+                className="max-w-44 md:max-w-xs truncate text-lg md:text-xl capitalize hover:text-accent duration-200 ease-out cursor-pointer"
+              >
+                {data.job}
+              </p>
+              <Label labelTitle={data.status} />
+            </div>
+            <div className="flex gap-x-3 md:gap-x-5">
+              <p className="flex items-center gap-x-1 text-light-grey text-sm capitalize">
+                <PinIcon className="w-5 h-auto" />
+                {data.location}
+              </p>
+              <p className="flex items-center gap-x-1 text-light-grey text-sm">
+                <CalendarIcon className="w-5 h-auto" />
+                {new Date(data.date).toLocaleDateString("de-DE")}
+              </p>
+            </div>
           </div>
         </div>
+        <Button
+          icon={<TrashIcon />}
+          onClick={() => deleteApplication(data.id)}
+          color="hover:bg-dark-primary hover:text-red text-light-grey hover:text-red transition duration-200"
+        />
       </div>
-      <button
-        type="button"
-        onClick={() => deleteApplication(data.id)}
-        className="cursor-pointer p-1.5 rounded-sm text-light-grey hover:bg-dark-primary hover:text-red transition duration-200"
-      >
-        <TrashIcon />
-      </button>
+      <Button title="Change Status" color="bg-dark-primary" />
       <Activity mode={openAppCard ? "visible" : "hidden"}>
         <ApplicationInfo onClose={() => setOpenAppCard(false)} data={data} />
       </Activity>
