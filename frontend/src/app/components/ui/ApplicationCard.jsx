@@ -19,7 +19,7 @@ export default function ApplicationCard({ data, deleteApplication }) {
             <div className="flex items-center gap-x-1.5">
               <p
                 onClick={() => setOpenAppCard(true)}
-                className="max-w-44 md:max-w-xs truncate text-lg md:text-xl capitalize hover:text-accent duration-200 ease-out cursor-pointer"
+                className="max-w-40 md:max-w-xs truncate text-lg md:text-xl capitalize hover:text-accent duration-200 ease-out cursor-pointer"
               >
                 {data.job}
               </p>
