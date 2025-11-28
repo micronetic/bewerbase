@@ -5,10 +5,7 @@ export default function ApplicationInfo({ onClose, data }) {
   return (
     <>
       <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
-        <div
-          onClick={(e) => e.stopPropagation()}
-          className="flex flex-col items-center gap-y-2 bg-dark-primary rounded-xl border border-dark-secondary p-6 w-[375px]"
-        >
+        <div className="flex flex-col items-center gap-y-2 bg-dark-primary rounded-xl border border-dark-secondary p-6 w-[375px]">
           <CloseIcon onClick={onClose} className="self-end cursor-pointer" />
           <div className="w-full flex flex-col gap-y-9">
             <div className="flex flex-col items-center gap-y-1.5">

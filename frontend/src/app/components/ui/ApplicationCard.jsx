@@ -7,10 +7,7 @@ export default function ApplicationCard({ data, deleteApplication }) {
   const [openAppCard, setOpenAppCard] = useState(false);
 
   return (
-    <div
-      onClick={() => setOpenAppCard(true)}
-      className="w-full flex justify-between items-center bg-dark-secondary rounded-lg px-2 py-1 md:px-2"
-    >
+    <div className="w-full flex justify-between items-center bg-dark-secondary rounded-lg px-2 py-1 md:px-2">
       <div className="flex items-center gap-x-5">
         <div className="w-16 h-16 flex justify-center items-center rounded-sm bg-light-grey text-4xl uppercase">
           {data.company.charAt(0)}
@@ -18,7 +15,10 @@ export default function ApplicationCard({ data, deleteApplication }) {
         <div className="flex flex-col gap-y-1.5">
           <p className="text-light-grey text-sm capitalize">{data.company}</p>
           <div className="flex items-center gap-x-1.5">
-            <p className="text-lg md:text-xl truncate max-w-44 md:max-w-none capitalize">
+            <p
+              onClick={() => setOpenAppCard(true)}
+              className="text-lg md:text-xl truncate max-w-44 md:max-w-none capitalize hover:text-accent duration-200 ease-out cursor-pointer"
+            >
               {data.job}
             </p>
             <Label labelTitle={data.status} />
