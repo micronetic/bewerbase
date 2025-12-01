@@ -1,0 +1,30 @@
+image: node:24
+
+cache:
+  paths:
+    - ./frontend/node_modules
+
+before_script:
+  - cd ./frontend
+  - rm -rf build
+  - CI=false yarn install
+
+pages:
+  stage: deploy
+  environment: production
+  script:
+    - CI=false yarn build
+    - cp build/index.html build/404.html
+    - ls
+    - cd ..
+    - cd ..
+    - mkdir public
+    - ls
+    - mv ./frontend/build/* public
+    - export
+  artifacts:
+    paths:
+      - public
+  only:
+    refs:
+      - main
