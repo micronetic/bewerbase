@@ -32,10 +32,16 @@ export default function Jobs() {
                     <p>{job.arbeitsort?.plz || "PLZ nicht verfügbar - "},</p>
                     <p>{job.arbeitsort?.ort || "Ort nicht verfügbar"}</p>
                   </div>
-                  <p>Eintrittsdatum: {job.eintrittsdatum || "Kein Datum da"}</p>
+                  <p>
+                    Eintrittsdatum:{" "}
+                    {new Date(job.eintrittsdatum).toLocaleDateString("de-DE") ||
+                      "Kein Datum da"}
+                  </p>
                   <p>
                     Veröffentlicht:{" "}
-                    {job.aktuelleVeroeffentlichungsdatum || "Kein Datum da"}
+                    {new Date(
+                      job.aktuelleVeroeffentlichungsdatum,
+                    ).toLocaleDateString("de-DE") || "Kein Datum da"}
                   </p>
                 </div>
               </div>
