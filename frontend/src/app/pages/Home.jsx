@@ -9,6 +9,7 @@ import SortBar from "../components/ui/SortBar";
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const [applications, setApplications] = useState([]);
+  const [active, setActive] = useState("All");
 
   useEffect(() => {
     const ls = localStorage.getItem("applications");
@@ -72,7 +73,7 @@ export default function Home() {
   return (
     <div className="w-full flex flex-col items-center gap-y-5">
       <div className="w-full flex flex-col md:flex-row items-center justify-between gap-5">
-        <SortBar />
+        <SortBar active={active} setActive={setActive} />
         <Button
           onClick={() => setShowModal(true)}
           icon={<PlusIcon />}
