@@ -1,30 +1,27 @@
 image: node:24
 
+variables:
+  YARN_ENABLE_IMMUTABLE_INSTALLS: "false"
+
 cache:
   paths:
-    - ./frontend/node_modules
+    - .yarn/cache/
+    - frontend/.yarn/cache/
 
 before_script:
-  - cd ./frontend
-  - rm -rf build
-  - CI=false yarn install
+  - corepack enable
+  - cd frontend
+  - yarn install
 
 pages:
   stage: deploy
-  environment: production
   script:
-    - CI=false yarn build
+    - yarn build
     - cp build/index.html build/404.html
-    - ls
-    - cd ..
-    - cd ..
-    - mkdir public
-    - ls
-    - mv ./frontend/build/* public
-    - export
+    - mkdir ../public
+    - cp -r build/* ../public/
   artifacts:
     paths:
       - public
   only:
-    refs:
-      - main
+    - main
