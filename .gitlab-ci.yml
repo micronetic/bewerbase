@@ -1,7 +1,7 @@
 image: node:24
 
 variables:
-  YARN_ENABLE_IMMUTABLE_INSTALLS: "false"
+  YARN_ENABLE_IMMUTABLE_INSTALLS: "true"
 
 cache:
   paths:
