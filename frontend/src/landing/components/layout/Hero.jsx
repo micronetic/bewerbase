@@ -34,6 +34,7 @@ export default function Hero() {
         src={heroImage}
         className="w-11/12 md:w-3/4 border border-white/20 md:p-3 p-1 rounded-xl bg-white/10 shadow-dark-primary"
         alt="app screenshot"
+        loading="eager"
       />
     </section>
   );

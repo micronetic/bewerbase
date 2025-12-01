@@ -24,6 +24,7 @@ export default function ImageText() {
             src={formScreenshot}
             alt="Formular Screenshot"
             className="w-auto h-3/4 md:h-4/5"
+            loading="lazy"
           />
         </div>
       </div>
