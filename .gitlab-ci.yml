@@ -5,7 +5,6 @@ variables:
 
 cache:
   paths:
-    - .yarn/cache/
     - frontend/.yarn/cache/
 
 before_script:
@@ -17,9 +16,9 @@ pages:
   stage: deploy
   script:
     - yarn build
-    - cp build/index.html build/404.html
+    - cp dist/index.html dist/404.html
     - mkdir ../public
-    - cp -r build/* ../public/
+    - cp -r dist/* ../public/
   artifacts:
     paths:
       - public
