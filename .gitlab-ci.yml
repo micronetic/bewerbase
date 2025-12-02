@@ -5,7 +5,7 @@ variables:
 
 cache:
   paths:
-    - frontend/.yarn/cache/
+    - frontend/node_modules
 
 before_script:
   - corepack enable
