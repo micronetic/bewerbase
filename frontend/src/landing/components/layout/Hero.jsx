@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { GitLabIcon, RocketIcon } from "../../../Icons";
-import heroImage from "../../assets/img/hero-image.png";
+import heroImage from "../../assets/img/hero-image.webp";
 
 export default function Hero() {
   return (
