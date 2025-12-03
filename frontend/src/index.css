@@ -43,3 +43,7 @@ body {
   font-family: Manrope, sans-serif;
   color: #fff;
 }
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(0.3);
+}

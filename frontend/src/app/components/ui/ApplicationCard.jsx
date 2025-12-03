@@ -15,18 +15,18 @@ export default function ApplicationCard({ data, deleteApplication }) {
             {data.company.charAt(0)}
           </div>
           <div className="flex flex-col gap-y-1.5">
-            <p className="text-light-grey text-sm capitalize">{data.company}</p>
+            <p className="text-light-grey text-sm">{data.company}</p>
             <div className="flex items-center gap-x-1.5">
               <p
                 onClick={() => setOpenAppCard(true)}
-                className="max-w-40 md:max-w-xs truncate text-lg md:text-xl capitalize hover:text-accent duration-200 ease-out cursor-pointer"
+                className="max-w-40 md:max-w-xs truncate text-lg md:text-xl hover:text-accent duration-200 ease-out cursor-pointer"
               >
                 {data.job}
               </p>
               <Label labelTitle={data.status} />
             </div>
             <div className="flex gap-x-3 md:gap-x-5">
-              <p className="flex items-center gap-x-1 text-light-grey text-sm capitalize">
+              <p className="flex items-center gap-x-1 text-light-grey text-sm">
                 <PinIcon className="w-5 h-auto" />
                 {data.location}
               </p>
