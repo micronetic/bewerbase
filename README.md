@@ -15,6 +15,6 @@ yarn dev
 
 Verwendete [Arbeitsamt API](https://jobsuche.api.bund.dev/)
 
-https://bewerbase-60317a.gitlab.io/
+https://microneticon.gitlab.io/bewerbase/
 
 </div>
