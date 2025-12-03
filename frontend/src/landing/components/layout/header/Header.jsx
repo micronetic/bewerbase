@@ -16,8 +16,8 @@ export default function Header() {
   return (
     <header className={style.landingHeader}>
       <Link to="#" className={style.logoContainer}>
-        <Logo className="hover:text-accent transition duration-200" />
-        <p>ApplicationMate</p>
+        <Logo />
+        <p>Bewerbase</p>
       </Link>
       <nav className={style.landingNav}>
         <Link to="/app" className={style.startBtn}>

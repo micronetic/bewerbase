@@ -39,7 +39,7 @@ export default function Sidebar({ hideMobile }) {
       >
         {!collapsed && (
           <Link to="/">
-            <Logo className="hover:text-accent transition duration-200" />
+            <Logo />
           </Link>
         )}
         <SidebarIcon onClick={toggleSidebar} />
