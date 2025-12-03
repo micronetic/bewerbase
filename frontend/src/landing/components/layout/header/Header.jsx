@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <header className={style.landingHeader}>
       <Link to="#" className={style.logoContainer}>
-        <Logo />
+        <Logo className={style.logo} />
         <p>Bewerbase</p>
       </Link>
       <nav className={style.landingNav}>

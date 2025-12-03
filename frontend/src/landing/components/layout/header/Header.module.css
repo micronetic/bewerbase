@@ -3,11 +3,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   background-color: #1a1a1acc;
   backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
+}
+
+.logo {
+  width: 2rem;
+  height: auto;
 }
 
 .logoContainer {
