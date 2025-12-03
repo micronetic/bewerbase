@@ -23,7 +23,7 @@ export default function Footer() {
           <TwitterIcon className={style.socialIcon} />
           <InstagramIcon className={style.socialIcon} />
         </div>
-        <span className="flex items-center gap-x-1.5 text-dark-secondary">
+        <span className={style.dateContainer}>
           &copy;
           <p>{new Date().getFullYear()}</p>
         </span>
