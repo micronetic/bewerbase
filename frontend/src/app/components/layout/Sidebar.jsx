@@ -32,7 +32,7 @@ export default function Sidebar({ hideMobile }) {
 
   return (
     <aside
-      className={`flex-col gap-y-10 py-11 transition-all duration-200 ease-out border-r border-r-light-grey/20 ${collapsed ? "w-[60px] px-2" : "w-[350px] px-6"} ${hideMobile ? "hidden md:flex" : ""}`}
+      className={`flex-col gap-y-14 py-6 transition-all duration-200 ease-out border-r border-r-light-grey/20 ${collapsed ? "w-[60px] px-2" : "w-[350px] px-6"} ${hideMobile ? "hidden md:flex" : ""}`}
     >
       <div
         className={`flex items-center ${collapsed ? "justify-center" : "justify-between"}`}

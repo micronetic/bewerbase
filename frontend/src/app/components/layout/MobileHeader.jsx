@@ -36,7 +36,7 @@ export default function MobileHeader() {
         <div className="fixed inset-0 w-full h-screen flex flex-col items-center bg-dark-primary/80 backdrop-blur-lg p-5 animate-fadeIn">
           <CloseIcon onClick={closeMenu} className="self-end" />
           <div className="flex flex-col items-center gap-y-10 mt-20">
-            <Logo />
+            <Logo className="w-8 h-auto" />
             <nav>
               <ul className="text-center">
                 {menuLinks.map((link) => (
