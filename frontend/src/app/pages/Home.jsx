@@ -35,40 +35,10 @@ export default function Home() {
     });
   }
 
-  // const applications = [
-  //   {
-  //     id: 1,
-  //     labelTitle: "Offer",
-  //     company: "Google",
-  //     jobTitle: "Frontend Developer",
-  //     location: "Köln",
-  //     date: "23.12.2025",
-  //   },
-  //   {
-  //     id: 2,
-  //     labelTitle: "Pending",
-  //     company: "Meta",
-  //     jobTitle: "Fullstack Developer",
-  //     location: "Düsseldorf",
-  //     date: "15.12.2026",
-  //   },
-  //   {
-  //     id: 3,
-  //     labelTitle: "Rejected",
-  //     company: "Firmenname",
-  //     jobTitle: "Web Developer",
-  //     location: "Bonn",
-  //     date: "24.12.2025",
-  //   },
-  //   {
-  //     id: 4,
-  //     labelTitle: "none",
-  //     company: "Firmenname",
-  //     jobTitle: "Fachinformatiker",
-  //     location: "München",
-  //     date: "24.11.2025",
-  //   },
-  // ];
+  function sortApplications(a, b) {
+    return new Date(b.date) - new Date(a.date);
+  }
+
   const numApplications = applications.length;
   return (
     <div className="w-full flex flex-col items-center gap-y-5">
@@ -83,13 +53,15 @@ export default function Home() {
         {/* <Button icon={<DownloadIcon />} title="Download" />*/}
       </div>
       {numApplications > 0 ? (
-        applications.map((app) => (
-          <ApplicationCard
-            key={app.id}
-            data={app}
-            deleteApplication={deleteApplication}
-          />
-        ))
+        applications
+          .toSorted(sortApplications)
+          .map((app) => (
+            <ApplicationCard
+              key={app.id}
+              data={app}
+              deleteApplication={deleteApplication}
+            />
+          ))
       ) : (
         <p className="text-xl mt-5">No entries yet. Add a new one</p>
       )}
