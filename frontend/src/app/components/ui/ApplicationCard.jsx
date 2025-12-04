@@ -6,7 +6,7 @@ import Label from "./Label";
 
 export default function ApplicationCard({ data, deleteApplication }) {
   const [openAppCard, setOpenAppCard] = useState(false);
-  const [showStatusChange, setShowStatusChange] = useState(false);
+  const [openStatusChange, setOpenStatusChange] = useState(false);
 
   function StatusChangeContent({ onClose }) {
     const statuses = ["Offer", "Pending", "Rejected"];
@@ -20,7 +20,7 @@ export default function ApplicationCard({ data, deleteApplication }) {
   }
 
   function toggleStatusChange() {
-    setShowStatusChange((toggle) => !toggle);
+    setOpenStatusChange((toggle) => !toggle);
   }
 
   return (
@@ -65,8 +65,8 @@ export default function ApplicationCard({ data, deleteApplication }) {
           color="bg-dark-primary w-full"
           onClick={toggleStatusChange}
         />
-        <Activity mode={showStatusChange ? "visible" : "hidden"}>
-          <StatusChangeContent onClose={() => setShowStatusChange(false)} />
+        <Activity mode={openStatusChange ? "visible" : "hidden"}>
+          <StatusChangeContent onClose={() => setOpenStatusChange(false)} />
         </Activity>
       </div>
       <Activity mode={openAppCard ? "visible" : "hidden"}>
