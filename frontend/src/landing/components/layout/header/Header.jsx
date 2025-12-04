@@ -15,22 +15,24 @@ export default function Header() {
   ];
   return (
     <header className={style.landingHeader}>
-      <Link to="#" className={style.logoContainer}>
-        <Logo className={style.logo} />
-        <p>Bewerbase</p>
-      </Link>
-      <nav className={style.landingNav}>
-        <Link to="/app" className={style.startBtn}>
-          Start Now
+      <div className={style.headerInner}>
+        <Link to="#" className={style.logoContainer}>
+          <Logo className={style.logo} />
+          <p>Bewerbase</p>
         </Link>
-        <ul>
-          {navLinks.map((link) => (
-            <li key={link.slug}>
-              <NavLink to={link.slug}>{link.title}</NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
+        <nav className={style.landingNav}>
+          <Link to="/app" className={style.startBtn}>
+            Start Now
+          </Link>
+          <ul>
+            {navLinks.map((link) => (
+              <li key={link.slug}>
+                <NavLink to={link.slug}>{link.title}</NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }

@@ -9,7 +9,7 @@ export default function Sidebar({ hideMobile }) {
   const [collapsed, setCollapsed] = useState(false);
 
   function toggleSidebar() {
-    setCollapsed((prev) => !prev);
+    setCollapsed((toggle) => !toggle);
   }
 
   const sideLinks = [
