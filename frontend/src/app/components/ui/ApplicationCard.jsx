@@ -9,11 +9,12 @@ export default function ApplicationCard({ data, deleteApplication }) {
   const [showStatusChange, setShowStatusChange] = useState(false);
 
   function StatusChangeContent({ onClose }) {
+    const statuses = ["Offer", "Pending", "Rejected"];
     return (
       <div className="absolute bottom-10 right-0 mb-2 p-3 flex gap-x-3 bg-dark-primary rounded-xl border border-dark-secondary">
-        <Label labelTitle="Offer" onClick={onClose} />
-        <Label labelTitle="Pending" onClick={onClose} />
-        <Label labelTitle="Rejected" onClick={onClose} />
+        {statuses.map((status) => (
+          <Label key={status} labelTitle={status} onClick={onClose} />
+        ))}
       </div>
     );
   }
@@ -34,7 +35,7 @@ export default function ApplicationCard({ data, deleteApplication }) {
             <div className="flex items-center gap-x-1.5">
               <p
                 onClick={() => setOpenAppCard(true)}
-                className="max-w-40 md:max-w-xs truncate text-lg md:text-xl hover:text-accent duration-200 ease-out cursor-pointer"
+                className="max-w-36 md:max-w-xs truncate text-lg md:text-xl hover:text-accent duration-200 ease-out cursor-pointer"
               >
                 {data.job}
               </p>
@@ -55,13 +56,13 @@ export default function ApplicationCard({ data, deleteApplication }) {
         <Button
           icon={<TrashIcon />}
           onClick={() => deleteApplication(data.id)}
-          color="hover:bg-dark-primary hover:text-red text-light-grey hover:text-red transition duration-200"
+          color="hover:bg-dark-primary hover:text-red text-light-grey hover:text-red"
         />
       </div>
       <div className="relative md:min-w-fit">
         <Button
           title="Change Status"
-          color="bg-dark-primary"
+          color="bg-dark-primary w-full"
           onClick={toggleStatusChange}
         />
         <Activity mode={showStatusChange ? "visible" : "hidden"}>

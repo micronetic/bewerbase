@@ -9,7 +9,7 @@ export default function Label({ labelTitle, onClick }) {
   return (
     <p
       onClick={onClick}
-      className={`flex justify-center items-center p-1 ${color} rounded-sm text-xs capitalize`}
+      className={`p-1 ${color} rounded-sm text-xs capitalize`}
     >
       {labelTitle}
     </p>
