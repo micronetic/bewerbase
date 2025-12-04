@@ -4,10 +4,11 @@ const statusColors = {
   Rejected: "bg-red",
 };
 
-export default function Label({ labelTitle }) {
+export default function Label({ labelTitle, onClick }) {
   const color = statusColors[labelTitle] || "bg-light-grey";
   return (
     <p
+      onClick={onClick}
       className={`flex justify-center items-center p-1 ${color} rounded-sm text-xs capitalize`}
     >
       {labelTitle}

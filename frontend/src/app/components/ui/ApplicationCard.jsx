@@ -6,6 +6,21 @@ import Label from "./Label";
 
 export default function ApplicationCard({ data, deleteApplication }) {
   const [openAppCard, setOpenAppCard] = useState(false);
+  const [showStatusChange, setShowStatusChange] = useState(false);
+
+  function StatusChangeContent({ onClose }) {
+    return (
+      <div className="absolute bottom-10 right-0 mb-2 p-3 flex gap-x-3 bg-dark-primary rounded-xl border border-dark-secondary">
+        <Label labelTitle="Offer" onClick={onClose} />
+        <Label labelTitle="Pending" onClick={onClose} />
+        <Label labelTitle="Rejected" onClick={onClose} />
+      </div>
+    );
+  }
+
+  function toggleStatusChange() {
+    setShowStatusChange((toggle) => !toggle);
+  }
 
   return (
     <div className="w-full flex md:flex-row flex-col gap-y-2 md:gap-x-3 md:items-center bg-dark-secondary rounded-lg px-2 py-1 md:px-2">
@@ -43,7 +58,16 @@ export default function ApplicationCard({ data, deleteApplication }) {
           color="hover:bg-dark-primary hover:text-red text-light-grey hover:text-red transition duration-200"
         />
       </div>
-      <Button title="Change Status" color="bg-dark-primary" />
+      <div className="relative md:min-w-fit">
+        <Button
+          title="Change Status"
+          color="bg-dark-primary"
+          onClick={toggleStatusChange}
+        />
+        <Activity mode={showStatusChange ? "visible" : "hidden"}>
+          <StatusChangeContent onClose={() => setShowStatusChange(false)} />
+        </Activity>
+      </div>
       <Activity mode={openAppCard ? "visible" : "hidden"}>
         <ApplicationInfo onClose={() => setOpenAppCard(false)} data={data} />
       </Activity>
