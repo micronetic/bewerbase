@@ -14,7 +14,7 @@ export default function Sidebar({ hideMobile }) {
 
   const sideLinks = [
     {
-      title: "Home",
+      title: "Applications",
       slug: "/app",
       icon: <HomeIcon />,
     },
