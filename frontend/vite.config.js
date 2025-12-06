@@ -25,7 +25,9 @@ export default defineConfig({
       registerType: "autoUpdate",
       manifest: {
         name: "Bewerbase",
-        short_name: "Bewerbase PWA",
+        short_name: "Bewerbase",
+        start_url: "/app",
+        scope: "/",
         icons: manifestIcons,
       },
     }),
