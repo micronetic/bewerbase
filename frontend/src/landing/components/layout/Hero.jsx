@@ -21,7 +21,7 @@ export default function Hero() {
             Start Now
           </Link>
           <Link
-            to="https://gitlab.com/microneticon/appmate-app"
+            to="https://gitlab.com/microneticon/bewerbase"
             target="_blank"
             className="bg-none inset-ring-2 rounded-lg flex justify-center items-center gap-x-3 py-3 px-4"
           >
