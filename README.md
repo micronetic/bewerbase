@@ -17,6 +17,4 @@ Verwendete [Arbeitsamt API](https://jobsuche.api.bund.dev/)
 
 https://bewerbase-60317a.gitlab.io/
 
-Testing mirror of GitLab repository
-
 </div>
