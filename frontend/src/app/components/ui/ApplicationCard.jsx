@@ -4,16 +4,27 @@ import ApplicationInfo from "./ApplicationInfo";
 import Button from "./Button";
 import Label from "./Label";
 
-export default function ApplicationCard({ data, deleteApplication }) {
+export default function ApplicationCard({
+  data,
+  deleteApplication,
+  updateStatus,
+}) {
   const [openAppCard, setOpenAppCard] = useState(false);
   const [openStatusChange, setOpenStatusChange] = useState(false);
 
-  function StatusChangeContent({ onClose }) {
+  function StatusChangeContent({ onClose, onStatusChange }) {
     const statuses = ["Offer", "Pending", "Rejected"];
     return (
       <div className="absolute bottom-10 right-0 mb-2 p-3 flex gap-x-3 bg-dark-primary rounded-xl border border-dark-secondary">
         {statuses.map((status) => (
-          <Label key={status} labelTitle={status} onClick={onClose} />
+          <Label
+            key={status}
+            labelTitle={status}
+            onClick={() => {
+              onStatusChange(status);
+              onClose();
+            }}
+          />
         ))}
       </div>
     );
@@ -66,7 +77,10 @@ export default function ApplicationCard({ data, deleteApplication }) {
           onClick={toggleStatusChange}
         />
         <Activity mode={openStatusChange ? "visible" : "hidden"}>
-          <StatusChangeContent onClose={() => setOpenStatusChange(false)} />
+          <StatusChangeContent
+            onClose={() => setOpenStatusChange(false)}
+            onStatusChange={(status) => updateStatus(data.id, status)}
+          />
         </Activity>
       </div>
       <Activity mode={openAppCard ? "visible" : "hidden"}>

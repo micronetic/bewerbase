@@ -15,9 +15,9 @@ export default function Hero() {
         <div className="flex gap-x-4 mt-4">
           <Link
             to="/app"
-            className="bg-accent py-3 px-4 rounded-lg flex justify-center items-center gap-x-3 hover:ring-2 hover:ring-inset hover:ring-white/50 transition duration-200 ease-in-out"
+            className="bg-accent text-dark-primary py-3 px-4 rounded-lg flex justify-center items-center gap-x-3 hover:ring-2 hover:ring-inset hover:ring-white/50 transition duration-200 ease-in-out"
           >
-            <RocketIcon />
+            <RocketIcon className="text-dark-primary" />
             Start Now
           </Link>
           <Link

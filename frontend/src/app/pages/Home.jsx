@@ -39,6 +39,12 @@ export default function Home() {
     return new Date(b.date) - new Date(a.date);
   }
 
+  function updateStatus(id, newStatus) {
+    setApplications((prev) =>
+      prev.map((app) => (app.id === id ? { ...app, status: newStatus } : app)),
+    );
+  }
+
   const numApplications = applications.length;
   return (
     <div className="w-full flex flex-col items-center gap-y-5">
@@ -60,6 +66,7 @@ export default function Home() {
               key={app.id}
               data={app}
               deleteApplication={deleteApplication}
+              updateStatus={updateStatus}
             />
           ))
       ) : (
