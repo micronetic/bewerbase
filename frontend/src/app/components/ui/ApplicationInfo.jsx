@@ -4,7 +4,7 @@ import Label from "./Label";
 export default function ApplicationInfo({ onClose, data }) {
   return (
     <>
-      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 animate-fadeIn">
         <div className="flex flex-col items-center gap-y-2 bg-dark-primary rounded-xl border border-dark-secondary p-6 w-[375px]">
           <CloseIcon onClick={onClose} className="self-end cursor-pointer" />
           <div className="w-full flex flex-col gap-y-9">

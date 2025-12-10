@@ -15,7 +15,7 @@ export default function ApplicationCard({
   function StatusChangeContent({ onClose, onStatusChange }) {
     const statuses = ["Offer", "Pending", "Rejected"];
     return (
-      <div className="absolute bottom-10 right-0 mb-2 p-3 flex gap-x-3 bg-dark-primary rounded-xl border border-dark-secondary">
+      <div className="absolute bottom-10 right-0 mb-2 p-3 flex gap-x-3 bg-dark-primary rounded-xl border border-dark-secondary animate-fadeIn">
         {statuses.map((status) => (
           <Label
             key={status}

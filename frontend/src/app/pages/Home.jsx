@@ -35,7 +35,7 @@ export default function Home() {
     });
   }
 
-  function sortApplications(a, b) {
+  function sortByDate(a, b) {
     return new Date(b.date) - new Date(a.date);
   }
 
@@ -60,7 +60,7 @@ export default function Home() {
       </div>
       {numApplications > 0 ? (
         applications
-          .toSorted(sortApplications)
+          .toSorted(sortByDate)
           .map((app) => (
             <ApplicationCard
               key={app.id}
