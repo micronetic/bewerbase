@@ -40,7 +40,7 @@ export default function ApplicationForm({ onClose, onSubmit }) {
         <form
           onSubmit={handleSubmit}
           autoComplete="off"
-          className="flex flex-col gap-y-5"
+          className="flex flex-col gap-y-4"
         >
           <label className={labelStyles}>
             Company
