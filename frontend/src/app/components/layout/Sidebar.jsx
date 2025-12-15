@@ -6,7 +6,7 @@ const linkClasses =
   "flex items-center gap-x-2.5 p-2.5 rounded-lg transition duration-300 ease-out hover:bg-dark-secondary";
 
 export default function Sidebar({ hideMobile }) {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
 
   function toggleSidebar() {
     setCollapsed((toggle) => !toggle);

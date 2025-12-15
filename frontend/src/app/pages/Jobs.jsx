@@ -8,7 +8,7 @@ export default function Jobs() {
     getJobsApi().then(setStellen);
   }, []);
   return (
-    <div className="flex flex-col items-center gap-y-4">
+    <div className="w-full md:max-w-7xl flex flex-col items-center gap-y-4">
       <h2 className="text-3xl capitalize mb-3 text-center">
         Arbeitsagentur Jobsuche API
       </h2>
