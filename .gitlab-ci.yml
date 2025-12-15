@@ -1,5 +1,3 @@
-image: node:24
-
 variables:
   YARN_ENABLE_IMMUTABLE_INSTALLS: "true"
 
@@ -15,17 +13,24 @@ include:
   - template: Jobs/Secret-Detection.gitlab-ci.yml
   - template: Security/DAST.gitlab-ci.yml
 
+dependency_scanning:
+  variables:
+    DS_DEFAULT_ANALYZERS: "npm"
+    DS_PACKAGE_MANAGER: "yarn"
+    DS_PROJECT_PATH: "frontend"
+
 cache:
+  key: frontend-yarn
   paths:
     - frontend/node_modules
 
-before_script:
-  - corepack enable
-  - cd frontend
-  - yarn install
-
 pages:
   stage: deploy
+  image: node:24
+  before_script:
+    - corepack enable
+    - cd frontend
+    - yarn install
   script:
     - yarn build
     - cp dist/index.html dist/404.html
