@@ -3,7 +3,7 @@ export async function getJobsApi() {
     "https://corsproxy.io/?url=https://rest.arbeitsagentur.de/jobboerse/jobsuche-service/pc/v4/jobs" +
     "?angebotsart=1" +
     "&wo=Köln" +
-    "&was=Webentwickler" +
+    "&was=Frontend-Entwickler/in" +
     "&umkreis=50" +
     "&arbeitszeit=vz" +
     "&page=1" +
