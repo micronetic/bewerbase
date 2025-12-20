@@ -23,10 +23,10 @@ export default function Footer() {
           <TwitterIcon className={style.socialIcon} />
           <InstagramIcon className={style.socialIcon} />
         </div>
-        <span className={style.dateContainer}>
-          &copy;
-          <p>{new Date().getFullYear()}</p>
-        </span>
+        <div className={style.dateContainer}>
+          <p>&copy; {new Date().getFullYear()}</p>
+          <p>Developed and designed by Microneticon</p>
+        </div>
       </div>
     </footer>
   );

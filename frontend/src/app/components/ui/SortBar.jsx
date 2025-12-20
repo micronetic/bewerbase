@@ -1,5 +1,5 @@
 export default function SortBar({ active, setActive }) {
-  const sortButtons = ["All", "Pending", "Rejected"];
+  const sortButtons = ["All", "Offer", "Pending", "Rejected"];
   const btnStyles = `w-full flex justify-center md:min-w-[7.3rem] items-center rounded-lg px-5 py-2 transition duration-300 ease-out hover:bg-dark-primary focus:bg-dark-primary active:bg-dark-primary cursor-pointer`;
   const inactiveStyle = "hover:bg-dark-primary";
   const activeStyle = "bg-dark-primary";
