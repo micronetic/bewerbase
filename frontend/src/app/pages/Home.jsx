@@ -1,6 +1,7 @@
+import jsPDF from "jspdf";
 import { nanoid } from "nanoid";
-import { Activity, useEffect, useState } from "react";
-import { PlusIcon } from "../../Icons";
+import { Activity, useEffect, useRef, useState } from "react";
+import { DownloadIcon, PlusIcon } from "../../Icons";
 import ApplicationCard from "../components/ui/ApplicationCard";
 import ApplicationForm from "../components/ui/ApplicationForm";
 import Button from "../components/ui/Button";
@@ -45,33 +46,63 @@ export default function Home() {
     );
   }
 
+  function exportToPDF() {
+    const pdf = new jsPDF("p", "mm", "a4");
+
+    pdf.setFontSize(18);
+    pdf.text("Bewerbungen", 10, 10);
+
+    pdf.setFontSize(12);
+    applications.forEach((app, index) => {
+      const yPos = 20 + index * 10;
+
+      pdf.text(
+        `${new Date(app.date).toLocaleDateString("de-DE")} - ${app.company} - ${app.location} - ${app.status}`,
+        10,
+        yPos,
+      );
+    });
+
+    pdf.save("bewerbungen.pdf");
+  }
+
   const numApplications = applications.length;
+  const cardsRef = useRef(null);
   return (
     <div className="w-full md:max-w-7xl flex flex-col items-center gap-y-5">
       <div className="w-full flex flex-col md:flex-row items-center justify-between gap-5">
         <SortBar active={active} setActive={setActive} />
-        <Button
-          onClick={() => setShowModal(true)}
-          icon={<PlusIcon />}
-          title="Add new"
-          color="bg-dark-secondary"
-        />
-        {/* <Button icon={<DownloadIcon />} title="Download" />*/}
+        <div className="w-full flex md:justify-end justify-center items-center gap-x-2">
+          <Button
+            onClick={() => setShowModal(true)}
+            icon={<PlusIcon />}
+            title="Add new"
+            color="bg-dark-secondary"
+          />
+          <Button
+            onClick={exportToPDF}
+            icon={<DownloadIcon />}
+            title="Download"
+            color="bg-dark-secondary"
+          />
+        </div>
       </div>
-      {numApplications > 0 ? (
-        applications
-          .toSorted(sortByDate)
-          .map((app) => (
-            <ApplicationCard
-              key={app.id}
-              data={app}
-              deleteApplication={deleteApplication}
-              updateStatus={updateStatus}
-            />
-          ))
-      ) : (
-        <p className="text-xl mt-5">No entries yet. Add a new one</p>
-      )}
+      <div ref={cardsRef} className="w-full flex flex-col gap-y-5">
+        {numApplications > 0 ? (
+          applications
+            .toSorted(sortByDate)
+            .map((app) => (
+              <ApplicationCard
+                key={app.id}
+                data={app}
+                deleteApplication={deleteApplication}
+                updateStatus={updateStatus}
+              />
+            ))
+        ) : (
+          <p className="text-xl mt-5">No entries yet. Add a new one</p>
+        )}
+      </div>
       <Activity mode={showModal ? "visible" : "hidden"}>
         <ApplicationForm
           onSubmit={handleAddApplication}
