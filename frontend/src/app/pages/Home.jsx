@@ -53,11 +53,11 @@ export default function Home() {
     pdf.text("Bewerbungen", 10, 10);
 
     pdf.setFontSize(12);
-    applications.forEach((app, index) => {
+    applications.toSorted(sortByDate).forEach((app, index) => {
       const yPos = 20 + index * 10;
 
       pdf.text(
-        `${new Date(app.date).toLocaleDateString("de-DE")} - ${app.company} - ${app.location} - ${app.status}`,
+        `${new Date(app.date).toLocaleDateString("de-DE")} - ${app.company} (${app.job}) - ${app.location} - ${app.status}`,
         10,
         yPos,
       );
