@@ -11,6 +11,7 @@ export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const [applications, setApplications] = useState([]);
   const [active, setActive] = useState("All");
+  const deDate = `${new Date().toLocaleDateString("de-DE")}`;
 
   useEffect(() => {
     const ls = localStorage.getItem("applications");
@@ -52,9 +53,9 @@ export default function Home() {
     pdf.setFontSize(18);
     pdf.text("Bewerbungen", 10, 15);
     pdf.setFontSize(12);
-    pdf.text(`Stand: ${new Date().toLocaleDateString("de-DE")}`, 55, 15);
+    pdf.text(`Stand: ${deDate}`, 55, 15);
 
-    pdf.setFontSize(12);
+    pdf.setFontSize(11);
     let currentY = 30;
     applications.toSorted(sortByDate).forEach((app) => {
       pdf.text(
@@ -65,7 +66,7 @@ export default function Home() {
       currentY += 10;
     });
 
-    pdf.save("bewerbungen.pdf");
+    pdf.save(`Bewerbungen_${deDate}.pdf`);
   }
 
   const numApplications = applications.length;
