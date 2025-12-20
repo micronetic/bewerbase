@@ -50,17 +50,19 @@ export default function Home() {
     const pdf = new jsPDF("p", "mm", "a4");
 
     pdf.setFontSize(18);
-    pdf.text("Bewerbungen", 10, 10);
+    pdf.text("Bewerbungen", 10, 15);
+    pdf.setFontSize(12);
+    pdf.text(`Stand: ${new Date().toLocaleDateString("de-DE")}`, 55, 15);
 
     pdf.setFontSize(12);
-    applications.toSorted(sortByDate).forEach((app, index) => {
-      const yPos = 20 + index * 10;
-
+    let currentY = 30;
+    applications.toSorted(sortByDate).forEach((app) => {
       pdf.text(
         `${new Date(app.date).toLocaleDateString("de-DE")} - ${app.company} (${app.job}) - ${app.location} - ${app.status}`,
         10,
-        yPos,
+        currentY,
       );
+      currentY += 10;
     });
 
     pdf.save("bewerbungen.pdf");
