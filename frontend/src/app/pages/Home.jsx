@@ -1,6 +1,6 @@
-import jsPDF from "jspdf";
+import { jsPDF } from "jspdf";
 import { nanoid } from "nanoid";
-import { Activity, useEffect, useRef, useState } from "react";
+import { Activity, useEffect, useState } from "react";
 import { DownloadIcon, PlusIcon } from "../../Icons";
 import ApplicationCard from "../components/ui/ApplicationCard";
 import ApplicationForm from "../components/ui/ApplicationForm";
@@ -69,7 +69,6 @@ export default function Home() {
   }
 
   const numApplications = applications.length;
-  const cardsRef = useRef(null);
   return (
     <div className="w-full md:max-w-7xl flex flex-col items-center gap-y-5">
       <div className="w-full flex flex-col md:flex-row items-center justify-between gap-5">
@@ -89,22 +88,20 @@ export default function Home() {
           />
         </div>
       </div>
-      <div ref={cardsRef} className="w-full flex flex-col gap-y-5">
-        {numApplications > 0 ? (
-          applications
-            .toSorted(sortByDate)
-            .map((app) => (
-              <ApplicationCard
-                key={app.id}
-                data={app}
-                deleteApplication={deleteApplication}
-                updateStatus={updateStatus}
-              />
-            ))
-        ) : (
-          <p className="text-xl mt-5">No entries yet. Add a new one</p>
-        )}
-      </div>
+      {numApplications > 0 ? (
+        applications
+          .toSorted(sortByDate)
+          .map((app) => (
+            <ApplicationCard
+              key={app.id}
+              data={app}
+              deleteApplication={deleteApplication}
+              updateStatus={updateStatus}
+            />
+          ))
+      ) : (
+        <p className="text-xl mt-5">No entries yet. Add a new one</p>
+      )}
       <Activity mode={showModal ? "visible" : "hidden"}>
         <ApplicationForm
           onSubmit={handleAddApplication}
