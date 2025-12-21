@@ -24,7 +24,7 @@ export default function ApplicationInfo({ onClose, data }) {
                 <Label labelTitle={data.status} />
               </div>
             </div>
-            <div className="flex flex-col gap-y-2">
+            <div className="flex flex-col gap-y-2 h-80 overflow-y-scroll">
               <h3 className="text-lg font-bold">Notes:</h3>
               <p>{data.notes}</p>
             </div>
