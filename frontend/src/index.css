@@ -18,26 +18,20 @@
       opacity: 1;
     }
   }
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
 }
 
 @font-face {
   font-family: "Manrope";
-  src: url("/fonts/Manrope/static/Manrope-Regular.ttf") format("truetype");
+  src: url("./assets/fonts/Manrope/static/Manrope-Regular.ttf")
+    format("truetype");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Manrope";
-  src: url("/fonts/Manrope/static/Manrope-ExtraBold.ttf") format("truetype");
+  src: url("./assets/fonts/Manrope/static/Manrope-ExtraBold.ttf")
+    format("truetype");
   font-weight: 800;
   font-display: swap;
 }
