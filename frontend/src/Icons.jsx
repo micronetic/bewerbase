@@ -640,25 +640,6 @@ export function CloseIcon({ className, onClick }) {
   );
 }
 
-export function GeneratorIcon({ className }) {
-  return (
-    <svg
-      className={className}
-      xmlns="http://www.w3.org/2000/svg"
-      width={24}
-      height={24}
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={1.5}
-    >
-      <path stroke="none" d="M0 0h24v24H0z" />
-      <path d="M6 6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2zM12 2v2M9 12v9M15 12v9M5 16l4-2M15 14l4 2M9 18h6M10 8v.01M14 8v.01" />
-    </svg>
-  );
-}
-
 export function RocketIcon({ className }) {
   return (
     <svg
@@ -733,6 +714,54 @@ export function InstagramIcon({ className }) {
       <path stroke="none" d="M0 0h24v24H0z" />
       <path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z" />
       <path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0M16.5 7.5v.01" />
+    </svg>
+  );
+}
+
+export function ArchiveIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      fill="none"
+      style={{
+        WebkitPrintColorAdjust: ":exact",
+      }}
+      viewBox="-1684 1341 24 24"
+    >
+      <g
+        style={{
+          fill: "#000",
+        }}
+      >
+        <path
+          fill="none"
+          d="m-1663.75 1348.5-.625 10.632a2.25 2.25 0 0 1-2.246 2.118h-10.757a2.25 2.25 0 0 1-2.247-2.118l-.625-10.632m6.25 3.75h4m-10.625-3.75h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-17.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
+          className="fills"
+          style={{
+            fill: "none",
+          }}
+        />
+        <g
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="strokes"
+        >
+          <path
+            d="m-1663.75 1348.5-.625 10.632a2.25 2.25 0 0 1-2.246 2.118h-10.757a2.25 2.25 0 0 1-2.247-2.118l-.625-10.632m6.25 3.75h4m-10.625-3.75h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-17.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
+            className="stroke-shape"
+            style={{
+              fill: "none",
+              fillOpacity: "none",
+              strokeWidth: 1.5,
+              stroke: "#fff",
+              strokeOpacity: 1,
+            }}
+          />
+        </g>
+      </g>
     </svg>
   );
 }
