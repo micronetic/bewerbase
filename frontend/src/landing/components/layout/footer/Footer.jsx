@@ -24,7 +24,7 @@ export default function Footer() {
           <InstagramIcon className={style.socialIcon} />
         </div>*/}
         <div className={style.dateContainer}>
-          <p>&copy; 2024 - {new Date().getFullYear()}</p>
+          <p>&copy; 2025 - {new Date().getFullYear()}</p>
         </div>
       </div>
     </footer>
