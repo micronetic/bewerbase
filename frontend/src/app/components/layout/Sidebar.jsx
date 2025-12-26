@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router";
-import {
-  ArchiveIcon,
-  HomeIcon,
-  JobsIcon,
-  Logo,
-  SidebarIcon,
-} from "../../../Icons";
+import { HomeIcon, JobsIcon, Logo, SidebarIcon } from "../../../Icons";
 
 const linkClasses =
   "flex items-center gap-x-2.5 p-2.5 rounded-lg transition duration-300 ease-out hover:bg-dark-secondary";
@@ -29,11 +23,11 @@ export default function Sidebar({ hideMobile }) {
       slug: "/app/jobs",
       icon: <JobsIcon />,
     },
-    {
-      title: "Archive",
-      slug: "/app/archive",
-      icon: <ArchiveIcon />,
-    },
+    // {
+    //   title: "Archive",
+    //   slug: "/app/archive",
+    //   icon: <ArchiveIcon />,
+    // },
   ];
 
   return (

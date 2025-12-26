@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { InstagramIcon, Logo, TwitterIcon } from "../../../../Icons";
+import { Logo } from "../../../../Icons";
 import style from "./Footer.module.css";
 
 export default function Footer() {
@@ -19,13 +19,12 @@ export default function Footer() {
             </li>
           </ul>
         </nav>
-        <div className={style.socials}>
+        {/* <div className={style.socials}>
           <TwitterIcon className={style.socialIcon} />
           <InstagramIcon className={style.socialIcon} />
-        </div>
+        </div>*/}
         <div className={style.dateContainer}>
-          <p>&copy; {new Date().getFullYear()}</p>
-          <p>Developed and designed by Microneticon</p>
+          <p>&copy; 2024 - {new Date().getFullYear()}</p>
         </div>
       </div>
     </footer>
