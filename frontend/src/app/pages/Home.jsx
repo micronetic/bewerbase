@@ -5,7 +5,6 @@ import { DownloadIcon, PlusIcon } from "../../Icons";
 import ApplicationCard from "../components/ui/ApplicationCard";
 import ApplicationForm from "../components/ui/ApplicationForm";
 import Button from "../components/ui/Button";
-import SortBar from "../components/ui/SortBar";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -73,7 +72,7 @@ export default function Home() {
   return (
     <div className="w-full md:max-w-7xl flex flex-col items-center gap-y-5">
       <div className="w-full flex flex-col md:flex-row items-center justify-between gap-5">
-        <SortBar active={active} setActive={setActive} />
+        {/* <SortBar active={active} setActive={setActive} />*/}
         <div className="w-full flex md:justify-end justify-center items-center gap-x-2">
           <Button
             onClick={() => setShowModal(true)}

@@ -3343,14 +3343,14 @@ __metadata:
     eslint: "npm:^9.39.2"
     eslint-plugin-react-hooks: "npm:^7.0.1"
     eslint-plugin-react-refresh: "npm:^0.4.26"
-    globals: "npm:^16.5.0"
-    jspdf: "npm:^3.0.4"
+    globals: "npm:^17.0.0"
+    jspdf: "npm:^4.0.0"
     nanoid: "npm:^5.1.6"
     react: "npm:^19.2.3"
     react-dom: "npm:^19.2.3"
-    react-router: "npm:^7.11.0"
+    react-router: "npm:^7.12.0"
     tailwindcss: "npm:^4.1.18"
-    vite: "npm:^7.3.0"
+    vite: "npm:^7.3.1"
     vite-plugin-pwa: "npm:^1.2.0"
   languageName: unknown
   linkType: soft
@@ -3529,10 +3529,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^16.5.0":
-  version: 16.5.0
-  resolution: "globals@npm:16.5.0"
-  checksum: 10c0/615241dae7851c8012f5aa0223005b1ed6607713d6813de0741768bd4ddc39353117648f1a7086b4b0fa45eae733f1c0a0fe369aa4e543bb63f8de8990178ea9
+"globals@npm:^17.0.0":
+  version: 17.0.0
+  resolution: "globals@npm:17.0.0"
+  checksum: 10c0/e3c169fdcb0fc6755707b697afb367bea483eb29992cfc0de1637382eb893146e17f8f96db6d7453e3696b478a7863ae2000e6c71cd2f4061410285106d3847a
   languageName: node
   linkType: hard
 
@@ -4139,9 +4139,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jspdf@npm:^3.0.4":
-  version: 3.0.4
-  resolution: "jspdf@npm:3.0.4"
+"jspdf@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "jspdf@npm:4.0.0"
   dependencies:
     "@babel/runtime": "npm:^7.28.4"
     canvg: "npm:^3.0.11"
@@ -4159,7 +4159,7 @@ __metadata:
       optional: true
     html2canvas:
       optional: true
-  checksum: 10c0/08e6cdb38319b68725d9b13072aac554b07aa66cbd490b0db6571ba74bbf356a56dac06ee758fe10f9e9640b5f5c209ab44801f34c6eeedab14c0f2bc90439e9
+  checksum: 10c0/042fef72dd71353bbe5ba57c8a7bbadfd62bdcdf33f5a81276fd4c66034cb43fe112b04940d02c7d31402fa645390312a5bc854ea4a179f71257ed6d2dec75e8
   languageName: node
   linkType: hard
 
@@ -4845,9 +4845,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router@npm:^7.11.0":
-  version: 7.11.0
-  resolution: "react-router@npm:7.11.0"
+"react-router@npm:^7.12.0":
+  version: 7.12.0
+  resolution: "react-router@npm:7.12.0"
   dependencies:
     cookie: "npm:^1.0.1"
     set-cookie-parser: "npm:^2.6.0"
@@ -4857,7 +4857,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 10c0/eb3693d63d1c52221a3449de5db170e2fa9e00536b011998b17f8a277f8b5e89b752d104dbbeb4ee3d474f8e4570167db00293b4510f63277e5e6658c5dab22b
+  checksum: 10c0/abde366f716cb3961a5a390c278375c0591bace5773e1b4420001f0a913b4dd53d490e7dea866acebcac2c0fa07378aa83702769d449449027406ed517a8ea00
   languageName: node
   linkType: hard
 
@@ -5862,9 +5862,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^7.3.0":
-  version: 7.3.0
-  resolution: "vite@npm:7.3.0"
+"vite@npm:^7.3.1":
+  version: 7.3.1
+  resolution: "vite@npm:7.3.1"
   dependencies:
     esbuild: "npm:^0.27.0"
     fdir: "npm:^6.5.0"
@@ -5913,7 +5913,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10c0/0457c196cdd5761ec351c0f353945430fbad330e615b9eeab729c8ae163334f18acdc1d9cd7d9d673dbf111f07f6e4f0b25d4ac32360e65b4a6df9991046f3ff
+  checksum: 10c0/5c7548f5f43a23533e53324304db4ad85f1896b1bfd3ee32ae9b866bac2933782c77b350eb2b52a02c625c8ad1ddd4c000df077419410650c982cd97fde8d014
   languageName: node
   linkType: hard
 
