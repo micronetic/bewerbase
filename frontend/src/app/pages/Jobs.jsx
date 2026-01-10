@@ -34,14 +34,17 @@ export default function Jobs() {
                   </div>
                   <p>
                     Eintrittsdatum:{" "}
-                    {new Date(job.eintrittsdatum).toLocaleDateString("de-DE") ||
-                      "Kein Datum da"}
+                    {job.eintrittsdatum
+                      ? new Date(job.eintrittsdatum).toLocaleDateString("de-DE")
+                      : "Kein Datum"}
                   </p>
                   <p>
                     Veröffentlicht:{" "}
-                    {new Date(
-                      job.aktuelleVeroeffentlichungsdatum,
-                    ).toLocaleDateString("de-DE") || "Kein Datum da"}
+                    {job.aktuelleVeroeffentlichungsdatum
+                      ? new Date(
+                          job.aktuelleVeroeffentlichungsdatum,
+                        ).toLocaleDateString("de-DE")
+                      : "Kein Datum"}
                   </p>
                 </div>
               </div>
