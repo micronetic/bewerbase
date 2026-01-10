@@ -1,6 +1,6 @@
 "use strict";
 
-export async function getJobsApi() {
+export async function handler() {
   const url =
     "https://rest.arbeitsagentur.de/jobboerse/jobsuche-service/pc/v4/jobs" +
     "?angebotsart=1" +
@@ -12,16 +12,23 @@ export async function getJobsApi() {
     "&size=25" +
     "&pav=false";
 
-  const response = await fetch(url, {
-    headers: {
-      "X-API-Key": process.env.JOBBOERSE_API_KEY,
-    },
-  });
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "X-API-Key": process.env.JOBBOERSE_API_KEY,
+      },
+    });
 
-  const result = await response.json();
-  // console.log(result.stellenangebote);
-  return {
-    statusCode: 200,
-    body: JSON.stringify(result.stellenangebote || []),
-  };
+    const data = await response.json();
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify(data.stellenangebote || []),
+    };
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: "Jobs konnten nicht geladen werden" }),
+    };
+  }
 }
