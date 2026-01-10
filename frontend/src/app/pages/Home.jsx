@@ -54,7 +54,7 @@ export default function Home() {
     pdf.setFontSize(12);
     pdf.text(`Stand: ${deDate}`, 55, 15);
 
-    pdf.setFontSize(11);
+    pdf.setFontSize(10);
     let currentY = 30;
     applications.toSorted(sortByDate).forEach((app) => {
       pdf.text(
