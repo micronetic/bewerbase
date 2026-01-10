@@ -1,3 +1,5 @@
+"use strict";
+
 export async function getJobsApi() {
   try {
     const response = await fetch(
