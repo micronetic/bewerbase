@@ -4,7 +4,7 @@ import { DownloadIcon, PlusIcon } from "../../Icons";
 import ApplicationCard from "../components/ui/ApplicationCard";
 import ApplicationForm from "../components/ui/ApplicationForm";
 import Button from "../components/ui/Button";
-import { exportToPDF } from "../utils/exportToPDF";
+import { exportToPDF } from "../utils/exportToPDF.js";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
