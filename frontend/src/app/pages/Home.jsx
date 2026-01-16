@@ -1,16 +1,15 @@
-import { jsPDF } from "jspdf";
 import { nanoid } from "nanoid";
 import { Activity, useEffect, useState } from "react";
 import { DownloadIcon, PlusIcon } from "../../Icons";
 import ApplicationCard from "../components/ui/ApplicationCard";
 import ApplicationForm from "../components/ui/ApplicationForm";
 import Button from "../components/ui/Button";
+import { exportToPDF } from "../utils/exportToPdf.js";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const [applications, setApplications] = useState([]);
   const [active, setActive] = useState("All");
-  const deDate = `${new Date().toLocaleDateString("de-DE")}`;
 
   useEffect(() => {
     const ls = localStorage.getItem("applications");
@@ -46,28 +45,6 @@ export default function Home() {
     );
   }
 
-  function exportToPDF() {
-    const pdf = new jsPDF("p", "mm", "a4");
-
-    pdf.setFontSize(18);
-    pdf.text("Bewerbungen", 10, 15);
-    pdf.setFontSize(12);
-    pdf.text(`Stand: ${deDate}`, 55, 15);
-
-    pdf.setFontSize(10);
-    let currentY = 30;
-    applications.toSorted(sortByDate).forEach((app) => {
-      pdf.text(
-        `${new Date(app.date).toLocaleDateString("de-DE")} - ${app.company} (${app.job}) - ${app.location} - ${app.status}`,
-        10,
-        currentY,
-      );
-      currentY += 10;
-    });
-
-    pdf.save(`Bewerbungen_${deDate}.pdf`);
-  }
-
   const numApplications = applications.length;
   return (
     <div className="w-full md:max-w-7xl flex flex-col items-center gap-y-5">
@@ -81,7 +58,7 @@ export default function Home() {
             color="bg-dark-secondary"
           />
           <Button
-            onClick={exportToPDF}
+            onClick={() => exportToPDF(applications, sortByDate)}
             icon={<DownloadIcon />}
             title="Download"
             color="bg-dark-secondary"
