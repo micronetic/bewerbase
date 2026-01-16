@@ -2,7 +2,7 @@
 
 const BASE_URL = "https://bewerbase.onrender.com/api/jobs";
 
-export const getJobsApi = async function () {
+export async function getJobsApi() {
   try {
     const parameter = new URLSearchParams({
       was: "Frontend-Entwickler/in",
@@ -22,4 +22,4 @@ export const getJobsApi = async function () {
     console.error("Fehler beim Laden der Jobs:", error.message);
     return [];
   }
-};
+}

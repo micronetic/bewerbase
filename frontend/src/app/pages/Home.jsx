@@ -4,12 +4,12 @@ import { DownloadIcon, PlusIcon } from "../../Icons";
 import ApplicationCard from "../components/ui/ApplicationCard";
 import ApplicationForm from "../components/ui/ApplicationForm";
 import Button from "../components/ui/Button";
-import { exportToPDF } from "../utils/exportToPdf.js";
+import { exportToPDF } from "../utils/exportToPDF";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const [applications, setApplications] = useState([]);
-  const [active, setActive] = useState("All");
+  // const [active, setActive] = useState("All");
 
   useEffect(() => {
     const ls = localStorage.getItem("applications");
