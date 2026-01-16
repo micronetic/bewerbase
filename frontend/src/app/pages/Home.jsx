@@ -5,6 +5,7 @@ import ApplicationCard from "../components/ui/ApplicationCard";
 import ApplicationForm from "../components/ui/ApplicationForm";
 import Button from "../components/ui/Button";
 import { exportToPDF } from "../utils/exportToPDF";
+import { sortByDate } from "../utils/helpers";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -22,9 +23,9 @@ export default function Home() {
     localStorage.setItem("applications", JSON.stringify(applications));
   }, [applications]);
 
-  function handleAddApplication(data) {
+  function handleAddApplication(app) {
     setApplications(function (prev) {
-      return [...prev, { ...data, id: nanoid() }];
+      return [...prev, { ...app, id: nanoid() }];
     });
   }
 
@@ -33,10 +34,6 @@ export default function Home() {
     setApplications(function (prev) {
       return prev.filter((app) => app.id !== id);
     });
-  }
-
-  function sortByDate(a, b) {
-    return new Date(b.date) - new Date(a.date);
   }
 
   function updateStatus(id, newStatus) {
@@ -58,7 +55,7 @@ export default function Home() {
             color="bg-dark-secondary"
           />
           <Button
-            onClick={() => exportToPDF(applications, sortByDate)}
+            onClick={() => exportToPDF(applications)}
             icon={<DownloadIcon />}
             title="Download"
             color="bg-dark-secondary"
@@ -71,7 +68,7 @@ export default function Home() {
           .map((app) => (
             <ApplicationCard
               key={app.id}
-              data={app}
+              app={app}
               deleteApplication={deleteApplication}
               updateStatus={updateStatus}
             />

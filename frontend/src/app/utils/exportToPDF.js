@@ -1,7 +1,8 @@
 import { jsPDF } from "jspdf";
+import { formatDate, sortByDate } from "./helpers";
 
-export function exportToPDF(applications, sortByDate) {
-  const deDate = `${new Date().toLocaleDateString("de-DE")}`;
+export function exportToPDF(applications) {
+  const deDate = formatDate(new Date());
   const pdf = new jsPDF("p", "mm", "a4");
 
   pdf.setFontSize(18);
@@ -32,7 +33,7 @@ export function exportToPDF(applications, sortByDate) {
     }
 
     pdf.text(
-      `${deDate} - ${app.company} (${app.job}) - ${app.location} - ${app.status}`,
+      `${formatDate(app.date)} - ${app.company} (${app.job}) - ${app.location} - ${app.status}`,
       10,
       currentY,
     );
