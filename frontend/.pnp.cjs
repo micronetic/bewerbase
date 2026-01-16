@@ -33,7 +33,6 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.2.8"],\
           ["@types/react-dom", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:19.2.3"],\
           ["@vitejs/plugin-react", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:5.1.2"],\
-          ["axios", "npm:1.13.2"],\
           ["eslint", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:9.39.2"],\
           ["eslint-plugin-react-hooks", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:7.0.1"],\
           ["eslint-plugin-react-refresh", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:0.4.26"],\
@@ -3527,15 +3526,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["asynckit", [\
-      ["npm:0.4.0", {\
-        "packageLocation": "../../../../../../.yarn/berry/cache/asynckit-npm-0.4.0-c718858525-10c0.zip/node_modules/asynckit/",\
-        "packageDependencies": [\
-          ["asynckit", "npm:0.4.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["at-least-node", [\
       ["npm:1.0.0", {\
         "packageLocation": "../../../../../../.yarn/berry/cache/at-least-node-npm-1.0.0-2b36e661fa-10c0.zip/node_modules/at-least-node/",\
@@ -3551,18 +3541,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["available-typed-arrays", "npm:1.0.7"],\
           ["possible-typed-array-names", "npm:1.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["axios", [\
-      ["npm:1.13.2", {\
-        "packageLocation": "../../../../../../.yarn/berry/cache/axios-npm-1.13.2-90e3ae8f5d-10c0.zip/node_modules/axios/",\
-        "packageDependencies": [\
-          ["axios", "npm:1.13.2"],\
-          ["follow-redirects", "virtual:90e3ae8f5d1081a2ebe4b7d99c8598618635aa223fffb3774885e7f413ad9bd6e2700dac780ec12f15baa5a1a39c5137b65b9a0b781e508a9f050aac6152f2f5#npm:1.15.11"],\
-          ["form-data", "npm:4.0.5"],\
-          ["proxy-from-env", "npm:1.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3863,16 +3841,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["combined-stream", [\
-      ["npm:1.0.8", {\
-        "packageLocation": "../../../../../../.yarn/berry/cache/combined-stream-npm-1.0.8-dc14d4a63a-10c0.zip/node_modules/combined-stream/",\
-        "packageDependencies": [\
-          ["combined-stream", "npm:1.0.8"],\
-          ["delayed-stream", "npm:1.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["commander", [\
       ["npm:2.20.3", {\
         "packageLocation": "../../../../../../.yarn/berry/cache/commander-npm-2.20.3-d8dcbaa39b-10c0.zip/node_modules/commander/",\
@@ -4074,15 +4042,6 @@ const RAW_RUNTIME_STATE =
           ["define-properties", "npm:1.2.1"],\
           ["has-property-descriptors", "npm:1.0.2"],\
           ["object-keys", "npm:1.1.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["delayed-stream", [\
-      ["npm:1.0.0", {\
-        "packageLocation": "../../../../../../.yarn/berry/cache/delayed-stream-npm-1.0.0-c5a4c4cc02-10c0.zip/node_modules/delayed-stream/",\
-        "packageDependencies": [\
-          ["delayed-stream", "npm:1.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4714,28 +4673,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["follow-redirects", [\
-      ["npm:1.15.11", {\
-        "packageLocation": "../../../../../../.yarn/berry/cache/follow-redirects-npm-1.15.11-ae7b2db266-10c0.zip/node_modules/follow-redirects/",\
-        "packageDependencies": [\
-          ["follow-redirects", "npm:1.15.11"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:90e3ae8f5d1081a2ebe4b7d99c8598618635aa223fffb3774885e7f413ad9bd6e2700dac780ec12f15baa5a1a39c5137b65b9a0b781e508a9f050aac6152f2f5#npm:1.15.11", {\
-        "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-de41ee3d23/7/.yarn/berry/cache/follow-redirects-npm-1.15.11-ae7b2db266-10c0.zip/node_modules/follow-redirects/",\
-        "packageDependencies": [\
-          ["@types/debug", null],\
-          ["debug", null],\
-          ["follow-redirects", "virtual:90e3ae8f5d1081a2ebe4b7d99c8598618635aa223fffb3774885e7f413ad9bd6e2700dac780ec12f15baa5a1a39c5137b65b9a0b781e508a9f050aac6152f2f5#npm:1.15.11"]\
-        ],\
-        "packagePeers": [\
-          "@types/debug",\
-          "debug"\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["for-each", [\
       ["npm:0.3.5", {\
         "packageLocation": "../../../../../../.yarn/berry/cache/for-each-npm-0.3.5-b74c5c5ba7-10c0.zip/node_modules/for-each/",\
@@ -4757,20 +4694,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["form-data", [\
-      ["npm:4.0.5", {\
-        "packageLocation": "../../../../../../.yarn/berry/cache/form-data-npm-4.0.5-c35fce815a-10c0.zip/node_modules/form-data/",\
-        "packageDependencies": [\
-          ["asynckit", "npm:0.4.0"],\
-          ["combined-stream", "npm:1.0.8"],\
-          ["es-set-tostringtag", "npm:2.1.0"],\
-          ["form-data", "npm:4.0.5"],\
-          ["hasown", "npm:2.0.2"],\
-          ["mime-types", "npm:2.1.35"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["frontend", [\
       ["workspace:.", {\
         "packageLocation": "./",\
@@ -4780,7 +4703,6 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.2.8"],\
           ["@types/react-dom", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:19.2.3"],\
           ["@vitejs/plugin-react", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:5.1.2"],\
-          ["axios", "npm:1.13.2"],\
           ["eslint", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:9.39.2"],\
           ["eslint-plugin-react-hooks", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:7.0.1"],\
           ["eslint-plugin-react-refresh", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:0.4.26"],\
@@ -5955,25 +5877,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["mime-db", [\
-      ["npm:1.52.0", {\
-        "packageLocation": "../../../../../../.yarn/berry/cache/mime-db-npm-1.52.0-b5371d6fd2-10c0.zip/node_modules/mime-db/",\
-        "packageDependencies": [\
-          ["mime-db", "npm:1.52.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["mime-types", [\
-      ["npm:2.1.35", {\
-        "packageLocation": "../../../../../../.yarn/berry/cache/mime-types-npm-2.1.35-dd9ea9f3e2-10c0.zip/node_modules/mime-types/",\
-        "packageDependencies": [\
-          ["mime-db", "npm:1.52.0"],\
-          ["mime-types", "npm:2.1.35"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["minimatch", [\
       ["npm:10.1.1", {\
         "packageLocation": "../../../../../../.yarn/berry/cache/minimatch-npm-10.1.1-453db4ee1a-10c0.zip/node_modules/minimatch/",\
@@ -6412,15 +6315,6 @@ const RAW_RUNTIME_STATE =
           ["err-code", "npm:2.0.3"],\
           ["promise-retry", "npm:2.0.1"],\
           ["retry", "npm:0.12.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["proxy-from-env", [\
-      ["npm:1.1.0", {\
-        "packageLocation": "../../../../../../.yarn/berry/cache/proxy-from-env-npm-1.1.0-c13d07f26b-10c0.zip/node_modules/proxy-from-env/",\
-        "packageDependencies": [\
-          ["proxy-from-env", "npm:1.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
