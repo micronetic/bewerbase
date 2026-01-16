@@ -15,12 +15,12 @@ export default function Sidebar({ hideMobile }) {
   const sideLinks = [
     {
       title: "Applications",
-      slug: "/app",
+      slug: "/",
       icon: <HomeIcon />,
     },
     {
       title: "Jobs",
-      slug: "/app/jobs",
+      slug: "/jobs",
       icon: <JobsIcon />,
     },
     // {
@@ -50,7 +50,6 @@ export default function Sidebar({ hideMobile }) {
             <li key={link.slug}>
               <NavLink
                 to={link.slug}
-                end={link.slug === "/app"}
                 className={({ isActive }) =>
                   `${linkClasses} ${isActive ? "bg-dark-secondary" : ""}`
                 }
