@@ -17,7 +17,6 @@ app.get("/api/jobs", async (req, res) => {
         params: req.query,
         headers: {
           "X-API-Key": process.env.X_API_KEY,
-          // "X-API-Key": "jobboerse-jobsuche",
         },
       },
     );

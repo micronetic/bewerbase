@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3000/api/jobs";
+const BASE_URL = "https://bewerbase.onrender.com/api/jobs";
 
 export const getJobsApi = async () => {
   try {
@@ -18,7 +18,7 @@ export const getJobsApi = async () => {
         page: 1,
       },
     });
-
+    // console.log(response.data.stellenangebote);
     return response.data.stellenangebote || [];
   } catch (error) {
     console.error("Fehler beim Laden der Jobs:", error.message);
