@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getJobsApi } from "../api/getJobsApi";
+import { formatDate } from "../utils/helpers";
 
 export default function Jobs() {
   const [stellen, setStellen] = useState([]);
@@ -35,15 +36,13 @@ export default function Jobs() {
                   <p>
                     Eintrittsdatum:{" "}
                     {job.eintrittsdatum
-                      ? new Date(job.eintrittsdatum).toLocaleDateString("de-DE")
+                      ? formatDate(job.eintrittsdatum)
                       : "Kein Datum"}
                   </p>
                   <p>
                     Veröffentlicht:{" "}
                     {job.aktuelleVeroeffentlichungsdatum
-                      ? new Date(
-                          job.aktuelleVeroeffentlichungsdatum,
-                        ).toLocaleDateString("de-DE")
+                      ? formatDate(job.aktuelleVeroeffentlichungsdatum)
                       : "Kein Datum"}
                   </p>
                 </div>
