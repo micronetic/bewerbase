@@ -15,7 +15,12 @@ export function exportToPDF(applications, sortByDate) {
   applications.toSorted(sortByDate).forEach((app) => {
     if (currentY > 280) {
       pdf.addPage();
-      currentY = 10;
+      currentY = 30;
+      pdf.setFontSize(18);
+      pdf.text("Bewerbungen", 10, 15);
+      pdf.setFontSize(12);
+      pdf.text(`Stand: ${deDate}`, 55, 15);
+      pdf.setFontSize(10);
     }
 
     if (app.status === "Pending") {
@@ -27,7 +32,7 @@ export function exportToPDF(applications, sortByDate) {
     }
 
     pdf.text(
-      `${new Date(app.date).toLocaleDateString("de-DE")} - ${app.company} (${app.job}) - ${app.location} - ${app.status}`,
+      `${deDate} - ${app.company} (${app.job}) - ${app.location} - ${app.status}`,
       10,
       currentY,
     );
