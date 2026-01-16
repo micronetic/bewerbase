@@ -605,7 +605,7 @@ export function CalendarIcon({ className }) {
 export function CloseIcon({ className, onClick }) {
   return (
     <svg
-      className={className}
+      className={`hover:rotate-90 transition ease-in-out duration-300 cursor-pointer ${className}`}
       onClick={onClick}
       xmlns="http://www.w3.org/2000/svg"
       width={20}
@@ -628,7 +628,7 @@ export function CloseIcon({ className, onClick }) {
           d="m4695-64 12-12m-12 0 12 12"
           className="stroke-shape"
           style={{
-            fill: "currentcolor",
+            fill: "currentColor",
             fillOpacity: "none",
             strokeWidth: 1.5,
             stroke: "#6f6f6f",
