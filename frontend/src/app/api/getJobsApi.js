@@ -1,21 +1,27 @@
 "use strict";
 
-export async function getJobsApi() {
+import axios from "axios";
+
+const BASE_URL = "http://localhost:3000/api/jobs";
+
+export const getJobsApi = async () => {
   try {
-    const response = await fetch(
-      "https://bewerbase.netlify.app/.netlify/functions/getJobsApi",
-    );
+    const response = await axios.get(BASE_URL, {
+      params: {
+        was: "Frontend-Entwickler/in",
+        wo: "Köln",
+        umkreis: 50,
+        angebotsart: 1,
+        size: 25,
+        arbeitszeit: "vz",
+        pav: false,
+        page: 1,
+      },
+    });
 
-    if (!response.ok) {
-      throw new Error(`Error: ${response.status}`);
-    }
-
-    const result = await response.json();
-    // console.log(result.stellenangebote);
-    return result || [];
+    return response.data.stellenangebote || [];
   } catch (error) {
-    console.log(error.message);
-    console.log(error.name);
+    console.error("Fehler beim Laden der Jobs:", error.message);
     return [];
   }
-}
+};
