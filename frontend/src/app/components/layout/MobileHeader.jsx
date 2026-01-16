@@ -15,11 +15,11 @@ export default function MobileHeader() {
   const menuLinks = [
     {
       title: "Home",
-      slug: "/app",
+      slug: "/",
     },
     {
       title: "Jobs",
-      slug: "/app/jobs",
+      slug: "/jobs",
     },
     // {
     //   title: "Email generator",
