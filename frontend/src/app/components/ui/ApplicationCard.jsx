@@ -1,5 +1,6 @@
 import { Activity, useState } from "react";
 import { CalendarIcon, PinIcon, TrashIcon } from "../../../Icons";
+import { formatDate } from "../../utils/helpers";
 import ApplicationInfo from "./ApplicationInfo";
 import Button from "./Button";
 import Label from "./Label";
@@ -59,7 +60,7 @@ export default function ApplicationCard({
               </p>
               <p className="flex items-center gap-x-1 text-light-grey text-sm">
                 <CalendarIcon className="w-5 h-auto" />
-                {new Date(app.date).toLocaleDateString("de-DE")}
+                {formatDate(app.date)}
               </p>
             </div>
           </div>

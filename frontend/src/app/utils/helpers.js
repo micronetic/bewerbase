@@ -3,5 +3,7 @@ export function sortByDate(a, b) {
 }
 
 export function formatDate(dateString) {
-  return new Date(dateString).toLocaleDateString("de-DE");
+  return new Date(dateString).toLocaleDateString("de-DE", {
+    dateStyle: "medium",
+  });
 }
