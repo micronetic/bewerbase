@@ -26,8 +26,6 @@ export default defineConfig({
       manifest: {
         name: "Bewerbase",
         short_name: "Bewerbase",
-        start_url: "/",
-        scope: "/",
         icons: manifestIcons,
       },
     }),
