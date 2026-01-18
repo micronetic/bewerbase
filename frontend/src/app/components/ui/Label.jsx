@@ -1,5 +1,5 @@
 const statusColors = {
-  Offer: "bg-green",
+  Interview: "bg-green",
   Pending: "bg-amber",
   Rejected: "bg-red",
 };

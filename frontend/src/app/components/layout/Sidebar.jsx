@@ -51,7 +51,7 @@ export default function Sidebar({ hideMobile }) {
               <NavLink
                 to={link.slug}
                 className={({ isActive }) =>
-                  `${linkClasses} ${isActive ? "bg-dark-secondary" : ""}`
+                  `${linkClasses} ${isActive ? "bg-dark-secondary inset-shadow-left" : ""}`
                 }
               >
                 {link.icon}

@@ -94,7 +94,7 @@ export default function ApplicationForm({ onClose, onSubmit }) {
               className={inputStyles}
             >
               <option>Choose Status</option>
-              <option>Offer</option>
+              <option>Interview</option>
               <option>Pending</option>
               <option>Rejected</option>
             </select>

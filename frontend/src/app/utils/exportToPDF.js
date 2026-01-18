@@ -28,6 +28,8 @@ export function exportToPDF(applications) {
       pdf.setTextColor(217, 119, 6);
     } else if (app.status === "Rejected") {
       pdf.setTextColor(220, 38, 38);
+    } else if (app.status === "Interview") {
+      pdf.setTextColor(22, 163, 74);
     } else {
       pdf.setTextColor(0, 0, 0);
     }
