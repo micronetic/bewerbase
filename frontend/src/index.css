@@ -8,7 +8,7 @@
   --color-green: #16a34a;
   --color-red: #dc2626;
   --color-light-grey: #6f6f6f;
-  --inset-shadow-left: inset 2px 0 0 0 #14b8a6;
+  --inset-shadow-left: inset 2px 0 0 0 var(--color-accent);
 
   --animate-fadeIn: fadeIn 0.2s ease-out;
   @keyframes fadeIn {
