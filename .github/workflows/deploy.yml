@@ -1,4 +1,4 @@
-name: Deploy Vite (Yarn 4) to Pages
+name: Deploy Vite to Pages
 
 on:
   push:
@@ -32,8 +32,11 @@ jobs:
           cache: yarn
           cache-dependency-path: frontend/yarn.lock
 
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Enable Corepack and force Yarn 4
+        run: |
+          corepack enable
+          corepack prepare yarn@4.6.1 --activate
+          yarn --version
 
       - name: Install dependencies
         working-directory: frontend
