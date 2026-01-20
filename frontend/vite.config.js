@@ -18,6 +18,7 @@ const manifestIcons = [
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/bewerbase/",
   plugins: [
     react(),
     tailwindcss(),
