@@ -8,7 +8,7 @@ import "./index.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/bewerbase">
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
