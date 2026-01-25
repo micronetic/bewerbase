@@ -1,7 +1,6 @@
 <div align="center">
 
 # Bewerbase
-<img width="100" height="100" src="app-icon.png" alt="Application Mate Logo" />
 
 `cd frontend`
 
@@ -17,6 +16,7 @@ Verwendete [Arbeitsamt API](https://jobsuche.api.bund.dev/)
 
 https://micronetic.github.io/bewerbase
 
-<img width="1920" height="977" src="landing-screenshot.png" alt="Landing page screenshot"> 
+<img width="1366" height="768" alt="Board" src="https://github.com/user-attachments/assets/d481e408-3ebf-47c3-9376-607ec586ef17" />
+
 
 </div>
