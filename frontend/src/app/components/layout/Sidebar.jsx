@@ -45,13 +45,13 @@ export default function Sidebar({ hideMobile }) {
         <SidebarIcon onClick={toggleSidebar} />
       </div>
       <nav>
-        <ul className="flex flex-col gap-y-2.5">
+        <ul className="flex flex-col gap-y-1">
           {sideLinks.map((link) => (
             <li key={link.slug}>
               <NavLink
                 to={link.slug}
                 className={({ isActive }) =>
-                  `${linkClasses} ${isActive ? "bg-dark-secondary inset-shadow-left" : ""}`
+                  `${linkClasses} ${isActive ? "bg-dark-secondary" : ""}`
                 }
               >
                 {link.icon}
