@@ -1,6 +1,6 @@
 <div align="center">
 
-# Bewerbase - WIP
+# Bewerbase
 <img width="100" height="100" src="app-icon.png" alt="Application Mate Logo" />
 
 `cd frontend`
