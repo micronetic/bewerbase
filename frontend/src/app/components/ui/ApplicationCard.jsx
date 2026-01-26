@@ -25,6 +25,7 @@ export default function ApplicationCard({
               onStatusChange(status);
               onClose();
             }}
+            clickable
           />
         ))}
       </div>
