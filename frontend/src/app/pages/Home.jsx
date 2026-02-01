@@ -57,7 +57,7 @@ export default function Home() {
           <Button
             onClick={() => exportToPDF(applications)}
             icon={<DownloadIcon />}
-            title="Download"
+            title="Download PDF"
             color="bg-dark-secondary"
           />
         </div>
