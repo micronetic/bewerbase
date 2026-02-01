@@ -2,15 +2,21 @@
 
 # Bewerbase
 
-`cd frontend`
+```
+git clone https://github.com/micronetic/bewerbase.git
+cd bewerbase
+```
 
-`
+```
+cd backend
 yarn install
-`
-und
-`
+```
+
+```
+cd frontend
+yarn install
 yarn dev
-`
+```
 
 Verwendete [Arbeitsamt API](https://jobsuche.api.bund.dev/)
 
