@@ -1,6 +1,6 @@
 "use strict";
 
-const BASE_URL = "https://bewerbase.onrender.com/api/jobs";
+const BASE_URL = "http://localhost:3000/api/jobs";
 
 export async function getJobsApi() {
   try {
