@@ -6,14 +6,7 @@ cd bewerbase
 ```
 
 ```
-cd backend
-yarn install
-```
-
-```
-cd frontend
-yarn install
-yarn dev
+docker compose up --build
 ```
 
 Verwendete [Arbeitsamt API](https://jobsuche.api.bund.dev/)
