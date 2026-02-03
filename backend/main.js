@@ -14,7 +14,7 @@ app.get("/api/jobs", async function (req, res) {
     const link = `https://rest.arbeitsagentur.de/jobboerse/jobsuche-service/pc/v4/jobs?${queryParameter}`;
     const response = await fetch(link, {
       headers: {
-        "X-API-Key": "jobboerse-jobsuche",
+        "X-API-Key": process.env.X_API_KEY,
       },
     });
     const data = await response.json();
