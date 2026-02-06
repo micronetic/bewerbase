@@ -48,7 +48,7 @@ export default function Home() {
       <div className="w-full flex flex-col md:flex-row items-center justify-between gap-5">
         {/* <SortBar active={active} setActive={setActive} />*/}
         <div className="flex gap-x-1 px-4 py-2 rounded-lg bg-dark-secondary">
-          <p className="whitespace-nowrap">Application count:</p>
+          <p className="whitespace-nowrap">Application counter:</p>
           <p className="font-semibold">{numApplications}</p>
         </div>
         <div className="w-full flex md:justify-end justify-center items-center gap-x-2">
